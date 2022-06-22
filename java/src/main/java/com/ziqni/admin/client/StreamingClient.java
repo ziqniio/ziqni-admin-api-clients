@@ -4,7 +4,6 @@
 package com.ziqni.admin.client;
 
 import com.ziqni.admin.client.streaming.*;
-import com.ziqni.wire.streaming.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

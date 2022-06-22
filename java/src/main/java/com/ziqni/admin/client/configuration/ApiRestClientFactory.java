@@ -4,7 +4,7 @@
 package com.ziqni.admin.client.configuration;
 
 import com.ziqni.admin.client.ApiClient;
-import com.ziqni.common.utils.CoreClientObjectMapper;
+import com.ziqni.admin.client.util.CoreClientObjectMapper;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;

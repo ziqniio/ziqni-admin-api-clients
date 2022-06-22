@@ -5,10 +5,8 @@ package com.ziqni.admin.client.streaming;
 
 import com.google.common.collect.Iterables;
 import com.ziqni.admin.client.configuration.AdminApiClientConfig;
-import com.ziqni.common.Common;
-import com.ziqni.common.utils.CoreClientObjectMapper;
-import com.ziqni.admin.client.configuration.AdminApiClientConfig;
-import com.ziqni.wire.streaming.EventHandler;
+import com.ziqni.admin.client.util.Common;
+import com.ziqni.admin.client.util.CoreClientObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.messaging.converter.MappingJackson2MessageConverter;

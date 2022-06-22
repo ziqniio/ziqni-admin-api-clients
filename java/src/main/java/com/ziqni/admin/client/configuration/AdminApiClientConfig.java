@@ -3,7 +3,7 @@
  */
 package com.ziqni.admin.client.configuration;
 
-import com.ziqni.configuration.ConfigurationLoader;
+import com.ziqni.admin.client.util.ConfigurationLoader;
 import org.keycloak.admin.client.Keycloak;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
