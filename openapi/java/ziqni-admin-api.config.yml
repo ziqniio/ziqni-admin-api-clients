@@ -1,0 +1,16 @@
+basePackage: com.ziqni.admin.client
+configPackage: com.ziqni.admin.client.config
+apiPackage: com.ziqni.admin.client.api
+modelPackage: com.ziqni.admin.client.model
+groupId: com.ziqni
+artifactId: ziqni-admin-api-client
+dateLibrary: java8
+hideGenerationTimestamp: true
+files:
+  ApiClientFactory.mustache:
+    folder: src/main/java/com/ziqni/admin/client
+    templateType: SupportingFiles
+    destinationFilename: ApiClientFactory.java
+  ws_api_delegate.mustache:
+    templateType: API
+    destinationFilename: Ws.java
