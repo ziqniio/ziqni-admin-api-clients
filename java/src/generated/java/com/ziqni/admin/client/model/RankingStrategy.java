@@ -56,7 +56,7 @@ public class RankingStrategy {
    * @return constraints
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "- scoreDesc - timeDesc - scoreFirst - ignoreTime - ignoreScore", required = true, value = "scoreDesc - The Ranking that can be Ascending or Descending based on timeDesc. timeDesc - The Ranking that can be Ascending or Descending based on scoreDesc. scoreFirst - The Ranking that can be score first or time first ignoreTime - The Ranking when time is ignored ignoreScore - The Ranking when score is ignored")
+  @ApiModelProperty(example = "- scoreDesc  - timeDesc - scoreFirst - ignoreTime - ignoreScore", required = true, value = "scoreDesc - The Ranking that can be Ascending or Descending based on timeDesc. timeDesc - The Ranking that can be Ascending or Descending based on scoreDesc. scoreFirst - The Ranking that can be score first or time first ignoreTime - The Ranking when time is ignored ignoreScore - The Ranking when score is ignored")
   @JsonProperty(JSON_PROPERTY_CONSTRAINTS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 

@@ -359,11 +359,11 @@ public class CreateRabbitMqConnectionRequestAllOf {
   }
 
    /**
-   * Additional constraints.  Supported values:  - ssl  - durable  - exclusive  - autoDelete
+   * Additional constraints.   Supported values:  - ssl  - durable  - exclusive  - autoDelete
    * @return addConstraints
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Additional constraints.  Supported values:  - ssl  - durable  - exclusive  - autoDelete")
+  @ApiModelProperty(value = "Additional constraints.   Supported values:  - ssl  - durable  - exclusive  - autoDelete")
   @JsonProperty(JSON_PROPERTY_ADD_CONSTRAINTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

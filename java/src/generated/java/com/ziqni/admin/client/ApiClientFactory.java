@@ -44,6 +44,7 @@ public abstract class ApiClientFactory {
     private static RulesApi rulesApi;
     private static SpacesApi spacesApi;
     private static TagsApi tagsApi;
+    private static TokenApi tokenApi;
     private static TransformersApi transformersApi;
     private static TranslationsApi translationsApi;
     private static UnitsOfMeasureApi unitsOfMeasureApi;
@@ -406,6 +407,18 @@ public abstract class ApiClientFactory {
         }
 
         return ApiClientFactory.tagsApi;
+    }
+
+     public static TokenApi getTokenApi() {
+        if(ApiClientFactory.tokenApi == null) {
+            init();
+
+            ApiClientFactory.tokenApi = (AdminApiClientConfig.isWebsocket())
+                    ? new TokenApiWs(ApiRestClientFactory.getApiClient(), streamingClient, Duration.ofSeconds(5))
+                    : new TokenApi(ApiRestClientFactory.getApiClient());
+        }
+
+        return ApiClientFactory.tokenApi;
     }
 
      public static TransformersApi getTransformersApi() {

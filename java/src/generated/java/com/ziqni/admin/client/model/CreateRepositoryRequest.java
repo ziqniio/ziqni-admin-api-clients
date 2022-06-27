@@ -239,7 +239,7 @@ public class CreateRepositoryRequest {
    * @return constraints
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "- system - public-site - disabled", required = true, value = "Additional constraints")
+  @ApiModelProperty(example = "- system  - public-site  - disabled", required = true, value = "Additional constraints")
   @JsonProperty(JSON_PROPERTY_CONSTRAINTS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
