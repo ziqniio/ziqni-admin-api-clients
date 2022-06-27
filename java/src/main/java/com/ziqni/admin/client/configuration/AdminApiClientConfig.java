@@ -102,7 +102,7 @@ public abstract class AdminApiClientConfig {
             return IdentityAuthorization.getAccessTokenString();
         } catch (Exception e) {
             logger.error("Access token error.", e);
-            throw e;
+            return null;
         }
     }
 
