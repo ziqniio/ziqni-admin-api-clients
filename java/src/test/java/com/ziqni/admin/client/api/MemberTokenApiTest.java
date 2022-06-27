@@ -27,8 +27,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * API tests for MembersApi
@@ -38,6 +37,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class MemberTokenApiTest implements tests.utils.CompleteableFutureTestWrapper{
 
     private static final Logger logger = LoggerFactory.getLogger(CompetitionsApiTest.class);
+    public final static String GAPI_RESOURCE_NAME = "ziqni-gapi";
     private static final String PUBLIC = "PUBLIC";
     private final MemberTokenApi api;
     private final LoadMemberTokenData loadTestData;
@@ -80,7 +80,8 @@ public class MemberTokenApiTest implements tests.utils.CompleteableFutureTestWra
             apiKey = apiKeyResp.getExternalReference();
             apiKeyIdsToDelete.add(apiKeyResp.getId());
 
-        } catch (ApiException e){
+            Thread.sleep(5000);
+        } catch (ApiException | InterruptedException e){
             logger.error("error", e.getCause());
         }
     }
@@ -99,17 +100,46 @@ public class MemberTokenApiTest implements tests.utils.CompleteableFutureTestWra
     @Test
     @Order(1)
     public void getPublicSessionTokenTest() throws ApiException {
-        final var request = loadTestData.getMemberTokenRequest(PUBLIC, apiKey,false,60);
+        final var request = loadTestData.getMemberTokenRequest(PUBLIC, apiKey, GAPI_RESOURCE_NAME, false,60);
 
         var response = $(api.createMemberToken(request));
 
         assertNotNull(response);
         assertNotNull(response.getData());
-        assertNotNull(response.getErrors());
 
         DecodedJWT jwt = JWT.decode(response.getData().getJwtToken());
         assertNotNull(jwt);
         assertEquals(PUBLIC,jwt.getClaims().get("member_reference_id").asString());
+    }
+
+    @Test
+    @Order(2)
+    public void getMemberSessionByMemberRefIdTokenTest() throws ApiException {
+        final var request = loadTestData.getMemberTokenRequest(memberRefId, apiKey, GAPI_RESOURCE_NAME, true,60);
+
+        var response = $(api.createMemberToken(request));
+
+        assertNotNull(response);
+        assertNotNull(response.getData());
+
+        DecodedJWT jwt = JWT.decode(response.getData().getJwtToken());
+        assertNotNull(jwt);
+        assertEquals(memberRefId,jwt.getClaims().get("member_reference_id").asString());
+    }
+
+    @Test
+    @Order(2)
+    public void getMemberSessionByMemberIdTokenTest() throws ApiException {
+        final var request = loadTestData.getMemberTokenRequest(memberId, apiKey, GAPI_RESOURCE_NAME, false,60);
+
+        var response = $(api.createMemberToken(request));
+
+        assertNotNull(response);
+        assertNotNull(response.getData());
+
+        DecodedJWT jwt = JWT.decode(response.getData().getJwtToken());
+        assertNotNull(jwt);
+        assertEquals(memberId,jwt.getClaims().get("member_id").asString());
     }
 
 
