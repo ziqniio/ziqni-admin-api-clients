@@ -43,6 +43,7 @@ import java.util.ArrayList;
 import java.util.StringJoiner;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -54,6 +55,7 @@ public class AchievementsApi {
   private final Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
   private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public AchievementsApi() {
     this(new ApiClient());
@@ -66,6 +68,7 @@ public class AchievementsApi {
     memberVarInterceptor = apiClient.getRequestInterceptor();
     memberVarReadTimeout = apiClient.getReadTimeout();
     memberVarResponseInterceptor = apiClient.getResponseInterceptor();
+    memberVarAsyncResponseInterceptor = apiClient.getAsyncResponseInterceptor();
   }
 
   private ApiException getApiException(String operationId, HttpResponse<String> response) {
@@ -123,6 +126,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("createAchievements", localVarResponse));
             }
@@ -151,6 +157,10 @@ public class AchievementsApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageAchievements" });
+
 
     String localVarPath = "/achievements";
 
@@ -216,6 +226,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("deleteAchievements", localVarResponse));
             }
@@ -240,6 +253,10 @@ public class AchievementsApi {
   private HttpRequest.Builder deleteAchievementsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageAchievements" });
+
 
     String localVarPath = "/achievements";
 
@@ -308,6 +325,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("deleteAchievementsByQuery", localVarResponse));
             }
@@ -332,6 +352,10 @@ public class AchievementsApi {
   private HttpRequest.Builder deleteAchievementsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminAchievements" });
+
 
     String localVarPath = "/achievements/delete";
 
@@ -397,6 +421,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getAchievementToClone", localVarResponse));
             }
@@ -425,6 +452,10 @@ public class AchievementsApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+
 
     String localVarPath = "/achievements/{id}/clone"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -489,6 +520,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getAchievements", localVarResponse));
             }
@@ -513,6 +547,10 @@ public class AchievementsApi {
   private HttpRequest.Builder getAchievementsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+
 
     String localVarPath = "/achievements";
 
@@ -583,6 +621,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getAchievementsByQuery", localVarResponse));
             }
@@ -607,6 +648,10 @@ public class AchievementsApi {
   private HttpRequest.Builder getAchievementsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+
 
     String localVarPath = "/achievements/query";
 
@@ -676,6 +721,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getAntecendentsForAchievement", localVarResponse));
             }
@@ -704,6 +752,10 @@ public class AchievementsApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+
 
     String localVarPath = "/achievements/{id}/antecedents"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -778,6 +830,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getDesendentsForAchievement", localVarResponse));
             }
@@ -806,6 +861,10 @@ public class AchievementsApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+
 
     String localVarPath = "/achievements/{id}/descendents"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -876,6 +935,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getIssuedAchievementsCountById", localVarResponse));
             }
@@ -904,6 +966,10 @@ public class AchievementsApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+
 
     String localVarPath = "/achievements/{id}/issued"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -970,6 +1036,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getMembersAchievementsDetails", localVarResponse));
             }
@@ -998,6 +1067,10 @@ public class AchievementsApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+
 
     String localVarPath = "/achievements/{id}/members"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -1069,6 +1142,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("updateAchievements", localVarResponse));
             }
@@ -1097,6 +1173,10 @@ public class AchievementsApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageAchievements" });
+
 
     String localVarPath = "/achievements";
 
@@ -1162,6 +1242,9 @@ public class AchievementsApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("updateAchievementsLiveStatus", localVarResponse));
             }
@@ -1186,6 +1269,10 @@ public class AchievementsApi {
   private HttpRequest.Builder updateAchievementsLiveStatusRequestBuilder(List<AchievementLiveStatusRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageAchievements" });
+
 
     String localVarPath = "/achievements/state";
 

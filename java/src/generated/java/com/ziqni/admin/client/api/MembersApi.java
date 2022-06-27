@@ -44,6 +44,7 @@ import java.util.ArrayList;
 import java.util.StringJoiner;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -55,6 +56,7 @@ public class MembersApi {
   private final Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
   private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public MembersApi() {
     this(new ApiClient());
@@ -67,6 +69,7 @@ public class MembersApi {
     memberVarInterceptor = apiClient.getRequestInterceptor();
     memberVarReadTimeout = apiClient.getReadTimeout();
     memberVarResponseInterceptor = apiClient.getResponseInterceptor();
+    memberVarAsyncResponseInterceptor = apiClient.getAsyncResponseInterceptor();
   }
 
   private ApiException getApiException(String operationId, HttpResponse<String> response) {
@@ -124,6 +127,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("createMembers", localVarResponse));
             }
@@ -152,6 +158,10 @@ public class MembersApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMembers" });
+
 
     String localVarPath = "/members";
 
@@ -217,6 +227,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("deleteMembers", localVarResponse));
             }
@@ -241,6 +254,10 @@ public class MembersApi {
   private HttpRequest.Builder deleteMembersRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminMembers" });
+
 
     String localVarPath = "/members";
 
@@ -309,6 +326,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("deleteMembersByQuery", localVarResponse));
             }
@@ -333,6 +353,10 @@ public class MembersApi {
   private HttpRequest.Builder deleteMembersByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminMembers" });
+
 
     String localVarPath = "/members/delete";
 
@@ -404,6 +428,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getAchievementsForMembers", localVarResponse));
             }
@@ -432,6 +459,10 @@ public class MembersApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+
 
     String localVarPath = "/members/{id}/achievements"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -509,6 +540,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getAwardsForMembers", localVarResponse));
             }
@@ -537,6 +571,10 @@ public class MembersApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+
 
     String localVarPath = "/members/{id}/awards"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -614,6 +652,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getCompetitionsForMembers", localVarResponse));
             }
@@ -642,6 +683,10 @@ public class MembersApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+
 
     String localVarPath = "/members/{id}/competitions"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -719,6 +764,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getContestsForMembers", localVarResponse));
             }
@@ -747,6 +795,10 @@ public class MembersApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+
 
     String localVarPath = "/members/{id}/contests"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -822,6 +874,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getMembers", localVarResponse));
             }
@@ -846,6 +901,10 @@ public class MembersApi {
   private HttpRequest.Builder getMembersRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+
 
     String localVarPath = "/members";
 
@@ -916,6 +975,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getMembersByQuery", localVarResponse));
             }
@@ -940,6 +1002,10 @@ public class MembersApi {
   private HttpRequest.Builder getMembersByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+
 
     String localVarPath = "/members/query";
 
@@ -1009,6 +1075,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getMembersByRefId", localVarResponse));
             }
@@ -1033,6 +1102,10 @@ public class MembersApi {
   private HttpRequest.Builder getMembersByRefIdRequestBuilder(List<String> refIds, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+
 
     String localVarPath = "/members/find-by-ref-identifiers";
 
@@ -1109,6 +1182,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("getMessagesForMembers", localVarResponse));
             }
@@ -1137,6 +1213,10 @@ public class MembersApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+
 
     String localVarPath = "/members/{id}/inbox"
         .replace("{id}", ApiClient.urlEncode(id.toString()));
@@ -1208,6 +1288,9 @@ public class MembersApi {
       return memberVarHttpClient.sendAsync(
           localVarRequestBuilder.build(),
           HttpResponse.BodyHandlers.ofString()).thenComposeAsync(localVarResponse -> {
+            if (memberVarAsyncResponseInterceptor != null) {
+              memberVarAsyncResponseInterceptor.accept(localVarResponse);
+            }
             if (localVarResponse.statusCode()/ 100 != 2) {
               return CompletableFuture.failedFuture(getApiException("updateMembers", localVarResponse));
             }
@@ -1236,6 +1319,10 @@ public class MembersApi {
     }
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
+
+    // Inject Oauth token into the request - ZIQNI 27-06-2022
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMembers" });
+
 
     String localVarPath = "/members";
 

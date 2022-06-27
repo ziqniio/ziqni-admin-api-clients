@@ -9178,6 +9178,9 @@ paths:
           $ref: '#/components/responses/TokenResponseBody'
         '500':
           $ref: '#/components/responses/TokenResponseBody'
+      security:
+        -
+          OAuth2: []
       operationId: createMemberToken
       description: Get Jwt Token
 components:

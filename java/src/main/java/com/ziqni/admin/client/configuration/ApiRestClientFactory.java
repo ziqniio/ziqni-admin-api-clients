@@ -68,12 +68,12 @@ public abstract class ApiRestClientFactory {
                 .setHost(AdminApiClientConfig.getAdminClientServerHost())
                 .setPort(AdminApiClientConfig.getAdminClientServerPort())
                 .setScheme(AdminApiClientConfig.getAdminClientServerScheme())
-                .setObjectMapper(new CoreClientObjectMapper().serializingObjectMapper())
-                .setRequestInterceptor(builder1 -> {
-                    final var token = AdminApiClientConfig.getAccessTokenString();
-                    if(token != null)
-                        builder1.header("Authorization", "Bearer " + token);
-                });
+                .setObjectMapper(new CoreClientObjectMapper().serializingObjectMapper());
+//                .setRequestInterceptor(builder1 -> {
+//                    final var token = AdminApiClientConfig.getAccessTokenString();
+//                    if(token != null)
+//                        builder1.header("Authorization", "Bearer " + token);
+//                });
     }
 
     public static ApiClient getApiClient(){
