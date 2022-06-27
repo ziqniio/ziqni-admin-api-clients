@@ -9170,7 +9170,7 @@ paths:
               $ref: '#/components/schemas/MemberTokenRequest'
         required: true
       tags:
-        - token
+        - member-token
       responses:
         '200':
           $ref: '#/components/responses/TokenResponseBody'

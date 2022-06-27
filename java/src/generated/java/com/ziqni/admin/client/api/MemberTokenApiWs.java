@@ -29,13 +29,13 @@ import java.util.*;
 import java.util.concurrent.CompletableFuture;
 
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-    public class TokenApiWs extends TokenApi {
+    public class MemberTokenApiWs extends MemberTokenApi {
     private final ApiClient apiClient;
     private final ObjectMapper memberVarObjectMapper;
     private final Duration memberVarReadTimeout;
     private final StreamingClient streamingClient;
 
-    public TokenApiWs(ApiClient apiClient, StreamingClient streamingClient, Duration readTimeout) {
+    public MemberTokenApiWs(ApiClient apiClient, StreamingClient streamingClient, Duration readTimeout) {
         this.apiClient = apiClient;
         this.memberVarObjectMapper = apiClient.getObjectMapper();
         this.streamingClient = streamingClient;

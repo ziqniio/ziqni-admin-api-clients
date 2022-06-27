@@ -36,6 +36,7 @@ public abstract class ApiClientFactory {
     private static FileRepositoriesApi fileRepositoriesApi;
     private static LanguagesApi languagesApi;
     private static MemberMessagesApi memberMessagesApi;
+    private static MemberTokenApi memberTokenApi;
     private static MembersApi membersApi;
     private static NotificationsApi notificationsApi;
     private static ProductsApi productsApi;
@@ -44,7 +45,6 @@ public abstract class ApiClientFactory {
     private static RulesApi rulesApi;
     private static SpacesApi spacesApi;
     private static TagsApi tagsApi;
-    private static TokenApi tokenApi;
     private static TransformersApi transformersApi;
     private static TranslationsApi translationsApi;
     private static UnitsOfMeasureApi unitsOfMeasureApi;
@@ -313,6 +313,18 @@ public abstract class ApiClientFactory {
         return ApiClientFactory.memberMessagesApi;
     }
 
+     public static MemberTokenApi getMemberTokenApi() {
+        if(ApiClientFactory.memberTokenApi == null) {
+            init();
+
+            ApiClientFactory.memberTokenApi = (AdminApiClientConfig.isWebsocket())
+                    ? new MemberTokenApiWs(ApiRestClientFactory.getApiClient(), streamingClient, Duration.ofSeconds(5))
+                    : new MemberTokenApi(ApiRestClientFactory.getApiClient());
+        }
+
+        return ApiClientFactory.memberTokenApi;
+    }
+
      public static MembersApi getMembersApi() {
         if(ApiClientFactory.membersApi == null) {
             init();
@@ -407,18 +419,6 @@ public abstract class ApiClientFactory {
         }
 
         return ApiClientFactory.tagsApi;
-    }
-
-     public static TokenApi getTokenApi() {
-        if(ApiClientFactory.tokenApi == null) {
-            init();
-
-            ApiClientFactory.tokenApi = (AdminApiClientConfig.isWebsocket())
-                    ? new TokenApiWs(ApiRestClientFactory.getApiClient(), streamingClient, Duration.ofSeconds(5))
-                    : new TokenApi(ApiRestClientFactory.getApiClient());
-        }
-
-        return ApiClientFactory.tokenApi;
     }
 
      public static TransformersApi getTransformersApi() {
