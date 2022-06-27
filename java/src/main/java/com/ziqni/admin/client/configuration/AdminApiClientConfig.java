@@ -34,9 +34,9 @@ public abstract class AdminApiClientConfig {
         if (loaded) return;
 
         adminClientServerBasePath = ConfigurationLoader.getParameter("admin.client.base.path").orElse("");
-        adminClientServerHost = ConfigurationLoader.getParameter("admin.client.server.host").get();
-        adminClientServerPort = Integer.valueOf(ConfigurationLoader.getParameter("admin.client.server.port").get());
-        adminClientServerScheme = ConfigurationLoader.getParameter("admin.client.server.scheme").get();
+        adminClientServerHost = ConfigurationLoader.getParameter("admin.client.server.host").orElse("api.ziqni.com");
+        adminClientServerPort = Integer.valueOf(ConfigurationLoader.getParameter("admin.client.server.port").orElse("443"));
+        adminClientServerScheme = ConfigurationLoader.getParameter("admin.client.server.scheme").orElse("wss");
 
         var isValidScheme = adminClientServerScheme.equals("http") || adminClientServerScheme.equals("https")
                 || adminClientServerScheme.equals("ws") || adminClientServerScheme.equals("wss");
@@ -46,11 +46,11 @@ public abstract class AdminApiClientConfig {
 
         isWebsocket = adminClientServerScheme.equals("ws") || adminClientServerScheme.equals("wss");
 
-        adminClientIdentityEndpoint = ConfigurationLoader.getParameter("admin.client.auth.server.url").get();
-        adminClientIdentityRealm = ConfigurationLoader.getParameter("admin.client.auth.realm").get();
-        adminClientIdentityUser = ConfigurationLoader.getParameter("admin.client.auth.username").get();
-        adminClientIdentityPass = ConfigurationLoader.getParameter("admin.client.auth.password").get();
-        adminClientIdentityProjectUrl = ConfigurationLoader.getParameter("admin.client.auth.resource").get();
+        adminClientIdentityEndpoint = ConfigurationLoader.getParameter("admin.client.auth.server.url").orElse("https://identity.ziqni.com");
+        adminClientIdentityRealm = ConfigurationLoader.getParameter("admin.client.auth.realm").orElse("ziqni");
+        adminClientIdentityUser = ConfigurationLoader.getParameter("admin.client.auth.username").orElse("user-not-set");
+        adminClientIdentityPass = ConfigurationLoader.getParameter("admin.client.auth.password").orElse("password-not-set");
+        adminClientIdentityProjectUrl = ConfigurationLoader.getParameter("admin.client.auth.resource").orElse("resource-not-set");
 
         initIdentityClient();
 
@@ -102,7 +102,7 @@ public abstract class AdminApiClientConfig {
             return IdentityAuthorization.getAccessTokenString();
         } catch (Exception e) {
             logger.error("Access token error.", e);
-            throw e;
+            return null;
         }
     }
 
