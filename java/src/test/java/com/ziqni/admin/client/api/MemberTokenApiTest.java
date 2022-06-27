@@ -12,6 +12,8 @@
 
 package com.ziqni.admin.client.api;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.ziqni.admin.client.ApiClientFactory;
 import com.ziqni.admin.client.ApiException;
 import com.ziqni.admin.client.data.LoadApiKeysData;
@@ -25,6 +27,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
@@ -35,7 +38,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class MemberTokenApiTest implements tests.utils.CompleteableFutureTestWrapper{
 
     private static final Logger logger = LoggerFactory.getLogger(CompetitionsApiTest.class);
-
+    private static final String PUBLIC = "PUBLIC";
     private final MemberTokenApi api;
     private final LoadMemberTokenData loadTestData;
     private final LoadMembersData loadMembersData;
@@ -96,7 +99,7 @@ public class MemberTokenApiTest implements tests.utils.CompleteableFutureTestWra
     @Test
     @Order(1)
     public void getPublicSessionTokenTest() throws ApiException {
-        final var request = loadTestData.getMemberTokenRequest("PUBLIC", apiKey,false,60);
+        final var request = loadTestData.getMemberTokenRequest(PUBLIC, apiKey,false,60);
 
         var response = $(api.createMemberToken(request));
 
@@ -104,6 +107,9 @@ public class MemberTokenApiTest implements tests.utils.CompleteableFutureTestWra
         assertNotNull(response.getData());
         assertNotNull(response.getErrors());
 
+        DecodedJWT jwt = JWT.decode(response.getData().getJwtToken());
+        assertNotNull(jwt);
+        assertEquals(PUBLIC,jwt.getClaims().get("member_reference_id").asString());
     }
 
 
