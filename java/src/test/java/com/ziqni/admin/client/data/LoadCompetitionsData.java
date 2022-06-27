@@ -6,7 +6,7 @@ import com.ziqni.admin.client.api.CompetitionsApi;
 import com.ziqni.admin.client.model.*;
 
 import com.ziqni.admin.client.model.*;
-import com.ziqni.common.utils.DateUtil;
+import com.ziqni.admin.client.util.DateUtil;
 import tests.utils.CompleteableFutureTestWrapper;
 
 import java.util.ArrayList;

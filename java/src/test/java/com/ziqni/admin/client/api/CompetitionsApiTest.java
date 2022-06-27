@@ -23,7 +23,7 @@ import com.ziqni.admin.client.data.LoadTagsData;
 import com.ziqni.admin.client.model.*;
 import com.ziqni.admin.client.util.ApiClientFactoryUtil;
 
-import com.ziqni.common.utils.DateUtil;
+import com.ziqni.admin.client.util.DateUtil;
 import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -18,10 +18,8 @@ import com.ziqni.admin.client.ApiException;
 import com.ziqni.admin.client.data.*;
 import com.ziqni.admin.client.model.*;
 
-import com.ziqni.admin.client.data.*;
-import com.ziqni.admin.client.model.*;
 import com.ziqni.admin.client.util.ApiClientFactoryUtil;
-import com.ziqni.common.utils.DateUtil;
+import com.ziqni.admin.client.util.DateUtil;
 import org.junit.jupiter.api.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +29,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static com.ziqni.admin.client.util.ApiClientFactoryUtil.initApiClientFactory;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

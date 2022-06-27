@@ -9156,6 +9156,30 @@ paths:
       summary: NOT AVAILABLE IN CURRENT RELEASE
       description: Clones a Competition for the identifier provided
       x-codegen-request-body-name: body
+  /member-token:
+    description: >-
+      The services returns a JWT token used to authorize requests to the other service end points. Use
+      this JWT as an auth header parameter for future requests: 
+      
+      --header 'Authorization: Bearer <jwt-token-from-api>'
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemberTokenRequest'
+        required: true
+      tags:
+        - token
+      responses:
+        '200':
+          $ref: '#/components/responses/TokenResponseBody'
+        '400':
+          $ref: '#/components/responses/TokenResponseBody'
+        '500':
+          $ref: '#/components/responses/TokenResponseBody'
+      operationId: createMemberToken
+      description: Get Jwt Token
 components:
   schemas:
     ProductReduced:
@@ -11922,7 +11946,7 @@ components:
         queryField:
           description: |+
             The key of the parameter that is being searched
-
+          
 
           type: string
         gt:
@@ -12222,8 +12246,8 @@ components:
               type: string
             addConstraints:
               description: |-
-                Additional constraints.
-
+                Additional constraints. 
+                
                 Supported values:
                  - ssl
                  - durable
@@ -12856,8 +12880,8 @@ components:
               items:
                 type: string
               example: |-
-                - system
-                - public-site
+                - system 
+                - public-site 
                 - disabled
             hostingOptions:
               $ref: '#/components/schemas/HostingOptions'
@@ -13525,7 +13549,7 @@ components:
           items:
             type: string
           example: |-
-            - scoreDesc
+            - scoreDesc 
             - timeDesc
             - scoreFirst
             - ignoreTime
@@ -16757,92 +16781,6 @@ components:
               type: array
               items:
                 type: string
-    Member:
-      description: This is the Member model
-      allOf:
-        -
-          $ref: '#/components/schemas/ModelDefault'
-        -
-          $ref: '#/components/schemas/OptParamModels'
-        -
-          required:
-            - name
-            - memberType
-            - memberRefId
-          type: object
-          properties:
-            name:
-              description: The name of the member that is used on leader boards and public displays
-              type: string
-              example: Player 1
-              x-vue-as-string: true
-              x-vue-search-all: true
-              x-vue-search-field: true
-              x-vue-disaply-order: 1001
-            memberRefId:
-              description: The reference to this member in your system
-              type: string
-              example: Player-1
-              x-vue-search-all: true
-              x-vue-search-field: true
-              x-vue-disaply-order: 1000
-            memberType:
-              $ref: '#/components/schemas/MemberType'
-              x-vue-disaply-order: 1002
-            teamMembers:
-              description: A social group like Guilds
-              type: array
-              items:
-                type: string
-              x-vue-hidden: true
-              x-vue-disaply-order: 1005
-            constraints:
-              description: Additional constraints
-              type: array
-              items:
-                type: string
-              x-vue-search-field: true
-              x-vue-disaply-order: 1006
-              x-vue-constraint: true
-              x-vue-constraint-options:
-                - Disabled
-            timeZoneOffset:
-              description: To what time zone teh emmber belongs to
-              type: string
-              x-vue-search-field: true
-              x-vue-disaply-order: 1003
-      example:
-        id: ziqniModelId
-        spaceName: ziqniModelSpaceName
-        created: '2018-02-10T09:30Z'
-        name: name
-        memberRefId: memberRefId
-        memberType: Individual
-        teamMembers:
-          - ziqniMemberId
-          - ziqniMemberId
-        constraints:
-          - disabled
-        timeZoneOffset: UTC
-        customFields:
-          customField1: customFieldValue1
-          customField2: customFieldValue2
-        tags:
-          - ziqniTagId
-          - ziqniTagId
-        metadata:
-          key1: value1
-          key2: value
-      x-vue-list: true
-      x-vue-show: true
-      x-vue-getter: members
-      x-vue-csv-supported: true
-      x-vue-sort-by: name
-      x-vue-sort-order: Asc
-      x-vue-limit: 10
-      x-vue-ops:
-        - Create
-        - Update
     MemberAward:
       description: This is the Member Award model
       allOf:
@@ -18450,6 +18388,251 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Error'
+    TokenResponse:
+      description: '        '
+      required: []
+      type: object
+      properties:
+        meta:
+          $ref: '#/components/schemas/MetaBasic'
+          description: ''
+        data:
+          $ref: '#/components/schemas/Token'
+          description: ''
+        errors:
+          description: ''
+          type: array
+          items:
+            $ref: '#/components/schemas/Error'
+      example:
+        meta:
+          totalRecordsFound: 59
+          skip: 93
+          limit: 53
+          time: '2018-02-10T09:30Z'
+        data:
+          -
+            icon: some text
+            jsonClass: some text
+            name: some text
+            description: some text
+            termsAndConditions: some text
+            constraints:
+              - some text
+              - some text
+            maxNumberOfIssues: 44
+            achievementLiveStatus: Live
+            scheduling:
+              scheduleType: Once
+              scheduleOccurrencesLimit: 63
+              every:
+                - 2
+                - 29
+              startDate: '2018-02-10T09:30Z'
+              endDate: '2018-02-10T09:30Z'
+              constraints:
+                - some text
+                - some text
+            dependantOn:
+              entityType: some text
+              dependantOn:
+                must:
+                  - some text
+                  - some text
+                mustNot:
+                  - some text
+                  - some text
+                should:
+                  - some text
+                  - some text
+                shouldMatchAtLeast: 8
+          -
+            icon: some text
+            jsonClass: some text
+            name: some text
+            description: some text
+            termsAndConditions: some text
+            constraints:
+              - some text
+              - some text
+            maxNumberOfIssues: 62
+            achievementLiveStatus: Draft
+            scheduling:
+              scheduleType: Weekly
+              scheduleOccurrencesLimit: 15
+              every:
+                - 36
+                - 65
+              startDate: '2018-02-10T09:30Z'
+              endDate: '2018-02-10T09:30Z'
+              constraints:
+                - some text
+                - some text
+            dependantOn:
+              entityType: some text
+              dependantOn:
+                must:
+                  - some text
+                  - some text
+                mustNot:
+                  - some text
+                  - some text
+                should:
+                  - some text
+                  - some text
+                shouldMatchAtLeast: 18
+        errors:
+          -
+            message: some text
+            code: 61
+            status: 75
+          -
+            message: some text
+            code: 88
+            status: 70
+    Token:
+      description: ''
+      required:
+        - jwtToken
+      type: object
+      properties:
+        jwtToken:
+          description: ''
+          type: string
+      example:
+        jwtToken: some text
+    MemberTokenRequest:
+      description: ''
+      required:
+        - member
+        - apiKey
+        - resource
+      type: object
+      properties:
+        apiKey:
+          description: The API key to use to generate this token.
+          type: string
+        isReferenceId:
+          description: >-
+            Default is FALSE, if set to TRUE then the meberId will be assumed to be client
+            provided reference id, if set to false then the memberId will be assumed to be a ZIQNI
+            generated identifier.
+          type: boolean
+        origins:
+          description: >
+            Allowed origins for the generated token. Leave empty to permit all origins,
+            Alternative provide up to 3 allowed origin URIs like https://my-space.api.ziqni.io
+          type: array
+          items:
+            type: string
+        member:
+          description: >-
+            The identifier used to find the member information. if this value is set to
+            "__PUBLIC__" and isReferenceId is set to "FALSE" then a genral use, non-member
+            specific token will be issued
+          type: string
+        expires:
+          description: >-
+            The number of minutes this token will be valid for. If left blank the token will only
+            be valid for 30 minutes
+          type: integer
+        resource:
+          description: This will be ziqni-gapi or similar
+          type: string
+      example:
+        apiKey: some text
+        isReferenceId: true
+        origins:
+          - some text
+          - some text
+        member: some text
+        expires: 72
+    Member:
+      description: This is the Member model
+      allOf:
+        -
+          $ref: '#/components/schemas/ModelDefault'
+        -
+          $ref: '#/components/schemas/OptParamModels'
+        -
+          required:
+            - name
+            - memberType
+            - memberRefId
+          type: object
+          properties:
+            name:
+              description: The name of the member that is used on leader boards and public displays
+              type: string
+              example: Player 1
+              x-vue-as-string: true
+              x-vue-search-all: true
+              x-vue-search-field: true
+              x-vue-disaply-order: 1001
+            memberRefId:
+              description: The reference to this member in your system
+              type: string
+              example: Player-1
+              x-vue-search-all: true
+              x-vue-search-field: true
+              x-vue-disaply-order: 1000
+            memberType:
+              $ref: '#/components/schemas/MemberType'
+              x-vue-disaply-order: 1002
+            teamMembers:
+              description: A social group like Guilds
+              type: array
+              items:
+                type: string
+              x-vue-hidden: true
+              x-vue-disaply-order: 1003
+            constraints:
+              description: Additional constraints
+              type: array
+              items:
+                type: string
+              x-vue-search-field: true
+              x-vue-disaply-order: 1006
+              x-vue-constraint: true
+              x-vue-constraint-options:
+                - Disabled
+            timeZoneOffset:
+              description: To what time zone teh emmber belongs to
+              type: string
+              x-vue-search-field: true
+              x-vue-disaply-order: 1005
+      example:
+        id: ziqniModelId
+        spaceName: ziqniModelSpaceName
+        created: '2018-02-10T09:30Z'
+        name: name
+        memberRefId: memberRefId
+        memberType: Individual
+        teamMembers:
+          - ziqniMemberId
+          - ziqniMemberId
+        constraints:
+          - disabled
+        timeZoneOffset: UTC
+        customFields:
+          customField1: customFieldValue1
+          customField2: customFieldValue2
+        tags:
+          - ziqniTagId
+          - ziqniTagId
+        metadata:
+          key1: value1
+          key2: value
+      x-vue-list: true
+      x-vue-show: true
+      x-vue-getter: members
+      x-vue-csv-supported: true
+      x-vue-sort-by: name
+      x-vue-sort-order: Asc
+      x-vue-limit: 10
+      x-vue-ops:
+        - Create
+        - Update
   responses:
     ApiResponseBody:
       content:
@@ -19542,6 +19725,12 @@ components:
       description: >-
         A modeled response of a Contest that can be used for Contest creation * The competitionId has
         to be changed to the competition Id of the competition that the contest will be cloned to
+    TokenResponseBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TokenResponse'
+      description: ''
   parameters:
     spaceName:
       name: spaceName

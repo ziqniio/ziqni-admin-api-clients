@@ -8,7 +8,7 @@ import com.ziqni.admin.client.model.ModelApiResponse;
 
 import com.ziqni.admin.client.model.CreateEventRequest;
 import com.ziqni.admin.client.model.ModelApiResponse;
-import com.ziqni.common.utils.DateUtil;
+import com.ziqni.admin.client.util.DateUtil;
 import tests.utils.CompleteableFutureTestWrapper;
 
 import java.util.*;
