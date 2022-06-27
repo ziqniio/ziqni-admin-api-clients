@@ -151,6 +151,7 @@ public class MembersApi {
     }
   }
 
+  public final static String[] createMembersOauthRoles = new String[]{  "ManageMembers" };
   private HttpRequest.Builder createMembersRequestBuilder(List<CreateMemberRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -159,8 +160,8 @@ public class MembersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createMembersOauthRoles);
 
 
     String localVarPath = "/members";
@@ -251,12 +252,13 @@ public class MembersApi {
     }
   }
 
+  public final static String[] deleteMembersOauthRoles = new String[]{  "AdminMembers" };
   private HttpRequest.Builder deleteMembersRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteMembersOauthRoles);
 
 
     String localVarPath = "/members";
@@ -350,12 +352,13 @@ public class MembersApi {
     }
   }
 
+  public final static String[] deleteMembersByQueryOauthRoles = new String[]{  "AdminMembers" };
   private HttpRequest.Builder deleteMembersByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteMembersByQueryOauthRoles);
 
 
     String localVarPath = "/members/delete";
@@ -452,6 +455,7 @@ public class MembersApi {
     }
   }
 
+  public final static String[] getAchievementsForMembersOauthRoles = new String[]{  "ViewMembers" };
   private HttpRequest.Builder getAchievementsForMembersRequestBuilder(String id, String achievementId, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -460,8 +464,8 @@ public class MembersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAchievementsForMembersOauthRoles);
 
 
     String localVarPath = "/members/{id}/achievements"
@@ -564,6 +568,7 @@ public class MembersApi {
     }
   }
 
+  public final static String[] getAwardsForMembersOauthRoles = new String[]{  "ViewMembers" };
   private HttpRequest.Builder getAwardsForMembersRequestBuilder(String id, String awardId, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -572,8 +577,8 @@ public class MembersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAwardsForMembersOauthRoles);
 
 
     String localVarPath = "/members/{id}/awards"
@@ -676,6 +681,7 @@ public class MembersApi {
     }
   }
 
+  public final static String[] getCompetitionsForMembersOauthRoles = new String[]{  "ViewMembers" };
   private HttpRequest.Builder getCompetitionsForMembersRequestBuilder(String id, String competitionId, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -684,8 +690,8 @@ public class MembersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCompetitionsForMembersOauthRoles);
 
 
     String localVarPath = "/members/{id}/competitions"
@@ -788,6 +794,7 @@ public class MembersApi {
     }
   }
 
+  public final static String[] getContestsForMembersOauthRoles = new String[]{  "ViewMembers" };
   private HttpRequest.Builder getContestsForMembersRequestBuilder(String id, String contestId, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -796,8 +803,8 @@ public class MembersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getContestsForMembersOauthRoles);
 
 
     String localVarPath = "/members/{id}/contests"
@@ -898,12 +905,13 @@ public class MembersApi {
     }
   }
 
+  public final static String[] getMembersOauthRoles = new String[]{  "ViewMembers" };
   private HttpRequest.Builder getMembersRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getMembersOauthRoles);
 
 
     String localVarPath = "/members";
@@ -999,12 +1007,13 @@ public class MembersApi {
     }
   }
 
+  public final static String[] getMembersByQueryOauthRoles = new String[]{  "ViewMembers" };
   private HttpRequest.Builder getMembersByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getMembersByQueryOauthRoles);
 
 
     String localVarPath = "/members/query";
@@ -1099,12 +1108,13 @@ public class MembersApi {
     }
   }
 
+  public final static String[] getMembersByRefIdOauthRoles = new String[]{  "ViewMembers" };
   private HttpRequest.Builder getMembersByRefIdRequestBuilder(List<String> refIds, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getMembersByRefIdOauthRoles);
 
 
     String localVarPath = "/members/find-by-ref-identifiers";
@@ -1206,6 +1216,7 @@ public class MembersApi {
     }
   }
 
+  public final static String[] getMessagesForMembersOauthRoles = new String[]{  "ViewMembers" };
   private HttpRequest.Builder getMessagesForMembersRequestBuilder(String id, String messageId, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -1214,8 +1225,8 @@ public class MembersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getMessagesForMembersOauthRoles);
 
 
     String localVarPath = "/members/{id}/inbox"
@@ -1312,6 +1323,7 @@ public class MembersApi {
     }
   }
 
+  public final static String[] updateMembersOauthRoles = new String[]{  "ManageMembers" };
   private HttpRequest.Builder updateMembersRequestBuilder(List<UpdateMemberRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -1320,8 +1332,8 @@ public class MembersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMembers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateMembersOauthRoles);
 
 
     String localVarPath = "/members";

@@ -147,6 +147,7 @@ public class CollaboratorsApi {
     }
   }
 
+  public final static String[] createCollaboratorsOauthRoles = new String[]{  "AdminCollaborator" };
   private HttpRequest.Builder createCollaboratorsRequestBuilder(List<CreateCollaboratorRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -155,8 +156,8 @@ public class CollaboratorsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminCollaborator" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createCollaboratorsOauthRoles);
 
 
     String localVarPath = "/collaborators";
@@ -247,12 +248,13 @@ public class CollaboratorsApi {
     }
   }
 
+  public final static String[] deleteCollaboratorsOauthRoles = new String[]{  "AdminCollaborator" };
   private HttpRequest.Builder deleteCollaboratorsRequestBuilder(List<String> emails) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminCollaborator" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteCollaboratorsOauthRoles);
 
 
     String localVarPath = "/collaborators";
@@ -344,12 +346,13 @@ public class CollaboratorsApi {
     }
   }
 
+  public final static String[] getAvailableRolesForCollaboratorsOauthRoles = new String[]{   };
   private HttpRequest.Builder getAvailableRolesForCollaboratorsRequestBuilder() throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAvailableRolesForCollaboratorsOauthRoles);
 
 
     String localVarPath = "/collaborators/available-roles";
@@ -438,12 +441,13 @@ public class CollaboratorsApi {
     }
   }
 
+  public final static String[] getCollaboratorsOauthRoles = new String[]{  "AdminCollaborator" };
   private HttpRequest.Builder getCollaboratorsRequestBuilder(List<String> emails, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminCollaborator" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCollaboratorsOauthRoles);
 
 
     String localVarPath = "/collaborators";
@@ -539,12 +543,13 @@ public class CollaboratorsApi {
     }
   }
 
+  public final static String[] getCollaboratorsByQueryOauthRoles = new String[]{  "ViewUOM" };
   private HttpRequest.Builder getCollaboratorsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewUOM" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCollaboratorsByQueryOauthRoles);
 
 
     String localVarPath = "/collaborators/query";
@@ -635,6 +640,7 @@ public class CollaboratorsApi {
     }
   }
 
+  public final static String[] updateCollaboratorsOauthRoles = new String[]{  "AdminCollaborator" };
   private HttpRequest.Builder updateCollaboratorsRequestBuilder(List<UpdateCollaboratorRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -643,8 +649,8 @@ public class CollaboratorsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminCollaborator" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateCollaboratorsOauthRoles);
 
 
     String localVarPath = "/collaborators";

@@ -146,6 +146,7 @@ public class CustomFieldsApi {
     }
   }
 
+  public final static String[] createCustomFieldsOauthRoles = new String[]{  "AdminCustomFields" };
   private HttpRequest.Builder createCustomFieldsRequestBuilder(List<CreateCustomFieldRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class CustomFieldsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminCustomFields" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createCustomFieldsOauthRoles);
 
 
     String localVarPath = "/custom-fields";
@@ -246,12 +247,13 @@ public class CustomFieldsApi {
     }
   }
 
+  public final static String[] deleteCustomFieldsOauthRoles = new String[]{  "AdminCustomFields" };
   private HttpRequest.Builder deleteCustomFieldsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminCustomFields" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteCustomFieldsOauthRoles);
 
 
     String localVarPath = "/custom-fields";
@@ -345,12 +347,13 @@ public class CustomFieldsApi {
     }
   }
 
+  public final static String[] deleteCustomFieldsByQueryOauthRoles = new String[]{  "AdminCustomFields" };
   private HttpRequest.Builder deleteCustomFieldsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminCustomFields" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteCustomFieldsByQueryOauthRoles);
 
 
     String localVarPath = "/custom-fields/delete";
@@ -445,12 +448,13 @@ public class CustomFieldsApi {
     }
   }
 
+  public final static String[] getCustomFieldsOauthRoles = new String[]{  "ViewCustomFields" };
   private HttpRequest.Builder getCustomFieldsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewCustomFields" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCustomFieldsOauthRoles);
 
 
     String localVarPath = "/custom-fields";
@@ -546,12 +550,13 @@ public class CustomFieldsApi {
     }
   }
 
+  public final static String[] getCustomFieldsByQueryOauthRoles = new String[]{  "ViewCustomFields" };
   private HttpRequest.Builder getCustomFieldsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewCustomFields" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCustomFieldsByQueryOauthRoles);
 
 
     String localVarPath = "/custom-fields/query";
@@ -642,6 +647,7 @@ public class CustomFieldsApi {
     }
   }
 
+  public final static String[] updateCustomFieldsOauthRoles = new String[]{  "AdminCustomFields" };
   private HttpRequest.Builder updateCustomFieldsRequestBuilder(List<UpdateCustomFieldRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -650,8 +656,8 @@ public class CustomFieldsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminCustomFields" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateCustomFieldsOauthRoles);
 
 
     String localVarPath = "/custom-fields";

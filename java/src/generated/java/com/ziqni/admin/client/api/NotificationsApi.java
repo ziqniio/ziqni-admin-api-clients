@@ -146,6 +146,7 @@ public class NotificationsApi {
     }
   }
 
+  public final static String[] createNotificationsOauthRoles = new String[]{  "ManageMessages" };
   private HttpRequest.Builder createNotificationsRequestBuilder(List<CreateNotificationRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class NotificationsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createNotificationsOauthRoles);
 
 
     String localVarPath = "/notifications";
@@ -246,12 +247,13 @@ public class NotificationsApi {
     }
   }
 
+  public final static String[] deleteNotificationsOauthRoles = new String[]{  "ManageMessages" };
   private HttpRequest.Builder deleteNotificationsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteNotificationsOauthRoles);
 
 
     String localVarPath = "/notifications";
@@ -345,12 +347,13 @@ public class NotificationsApi {
     }
   }
 
+  public final static String[] deleteNotificationsByQueryOauthRoles = new String[]{  "AdminMessages" };
   private HttpRequest.Builder deleteNotificationsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteNotificationsByQueryOauthRoles);
 
 
     String localVarPath = "/notifications/delete";
@@ -445,12 +448,13 @@ public class NotificationsApi {
     }
   }
 
+  public final static String[] getNotificationsOauthRoles = new String[]{  "ViewMessages" };
   private HttpRequest.Builder getNotificationsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getNotificationsOauthRoles);
 
 
     String localVarPath = "/notifications";
@@ -546,12 +550,13 @@ public class NotificationsApi {
     }
   }
 
+  public final static String[] getNotificationsByQueryOauthRoles = new String[]{  "ViewMessages" };
   private HttpRequest.Builder getNotificationsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getNotificationsByQueryOauthRoles);
 
 
     String localVarPath = "/notifications/query";
@@ -642,6 +647,7 @@ public class NotificationsApi {
     }
   }
 
+  public final static String[] updateNotificationsStatusOauthRoles = new String[]{  "ManageMessages" };
   private HttpRequest.Builder updateNotificationsStatusRequestBuilder(List<UpdateNotificationStatusRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -650,8 +656,8 @@ public class NotificationsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateNotificationsStatusOauthRoles);
 
 
     String localVarPath = "/notifications/state";

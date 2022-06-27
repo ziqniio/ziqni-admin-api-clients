@@ -148,6 +148,7 @@ public class WebhooksApi {
     }
   }
 
+  public final static String[] createWebhooksOauthRoles = new String[]{  "AdminWebhooks" };
   private HttpRequest.Builder createWebhooksRequestBuilder(CreateWebhookRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -156,8 +157,8 @@ public class WebhooksApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminWebhooks" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createWebhooksOauthRoles);
 
 
     String localVarPath = "/webhooks";
@@ -248,12 +249,13 @@ public class WebhooksApi {
     }
   }
 
+  public final static String[] deleteWebhooksOauthRoles = new String[]{  "AdminWebhooks" };
   private HttpRequest.Builder deleteWebhooksRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminWebhooks" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteWebhooksOauthRoles);
 
 
     String localVarPath = "/webhooks";
@@ -347,12 +349,13 @@ public class WebhooksApi {
     }
   }
 
+  public final static String[] deleteWebhooksByQueryOauthRoles = new String[]{  "AdminWebhooks" };
   private HttpRequest.Builder deleteWebhooksByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminWebhooks" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteWebhooksByQueryOauthRoles);
 
 
     String localVarPath = "/webhooks/delete";
@@ -447,12 +450,13 @@ public class WebhooksApi {
     }
   }
 
+  public final static String[] getWebhooksOauthRoles = new String[]{  "AdminWebhooks" };
   private HttpRequest.Builder getWebhooksRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminWebhooks" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getWebhooksOauthRoles);
 
 
     String localVarPath = "/webhooks";
@@ -548,12 +552,13 @@ public class WebhooksApi {
     }
   }
 
+  public final static String[] getWebhooksByQueryOauthRoles = new String[]{  "AdminWebhooks" };
   private HttpRequest.Builder getWebhooksByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminWebhooks" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getWebhooksByQueryOauthRoles);
 
 
     String localVarPath = "/webhooks/query";
@@ -642,12 +647,13 @@ public class WebhooksApi {
     }
   }
 
+  public final static String[] getWebhooksTriggersOauthRoles = new String[]{  "AdminWebhooks" };
   private HttpRequest.Builder getWebhooksTriggersRequestBuilder() throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminWebhooks" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getWebhooksTriggersOauthRoles);
 
 
     String localVarPath = "/webhooks/triggers";
@@ -732,6 +738,7 @@ public class WebhooksApi {
     }
   }
 
+  public final static String[] updateWebhooksOauthRoles = new String[]{  "AdminWebhooks" };
   private HttpRequest.Builder updateWebhooksRequestBuilder(UpdateWebhookRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -740,8 +747,8 @@ public class WebhooksApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminWebhooks" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateWebhooksOauthRoles);
 
 
     String localVarPath = "/webhooks";
@@ -832,12 +839,13 @@ public class WebhooksApi {
     }
   }
 
+  public final static String[] updateWebhooksStateOauthRoles = new String[]{  "AdminWebhooks" };
   private HttpRequest.Builder updateWebhooksStateRequestBuilder(UpdateStateRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminWebhooks" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateWebhooksStateOauthRoles);
 
 
     String localVarPath = "/webhooks/state";

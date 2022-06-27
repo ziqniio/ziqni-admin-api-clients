@@ -146,6 +146,7 @@ public class TranslationsApi {
     }
   }
 
+  public final static String[] createTranslationsOauthRoles = new String[]{  "Owner","Collaborator" };
   private HttpRequest.Builder createTranslationsRequestBuilder(List<CreateTranslationRequest> createTranslationRequest) throws ApiException {
     // verify the required parameter 'createTranslationRequest' is set
     if (createTranslationRequest == null) {
@@ -154,8 +155,8 @@ public class TranslationsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "Owner","Collaborator" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createTranslationsOauthRoles);
 
 
     String localVarPath = "/translations";
@@ -246,12 +247,13 @@ public class TranslationsApi {
     }
   }
 
+  public final static String[] deleteTranslationsOauthRoles = new String[]{   };
   private HttpRequest.Builder deleteTranslationsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteTranslationsOauthRoles);
 
 
     String localVarPath = "/translations";
@@ -345,12 +347,13 @@ public class TranslationsApi {
     }
   }
 
+  public final static String[] deleteTranslationsByQueryOauthRoles = new String[]{   };
   private HttpRequest.Builder deleteTranslationsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteTranslationsByQueryOauthRoles);
 
 
     String localVarPath = "/translations/delete";
@@ -445,12 +448,13 @@ public class TranslationsApi {
     }
   }
 
+  public final static String[] getTranslationsOauthRoles = new String[]{   };
   private HttpRequest.Builder getTranslationsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getTranslationsOauthRoles);
 
 
     String localVarPath = "/translations";
@@ -550,12 +554,13 @@ public class TranslationsApi {
     }
   }
 
+  public final static String[] getTranslationsByEntityIdOauthRoles = new String[]{   };
   private HttpRequest.Builder getTranslationsByEntityIdRequestBuilder(List<String> refIds, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getTranslationsByEntityIdOauthRoles);
 
 
     String localVarPath = "/translations/find-by-entity-id";
@@ -651,12 +656,13 @@ public class TranslationsApi {
     }
   }
 
+  public final static String[] getTranslationsByQueryOauthRoles = new String[]{   };
   private HttpRequest.Builder getTranslationsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getTranslationsByQueryOauthRoles);
 
 
     String localVarPath = "/translations/query";
@@ -747,6 +753,7 @@ public class TranslationsApi {
     }
   }
 
+  public final static String[] updateTranslationsOauthRoles = new String[]{   };
   private HttpRequest.Builder updateTranslationsRequestBuilder(List<UpdateTranslationRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -755,8 +762,8 @@ public class TranslationsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateTranslationsOauthRoles);
 
 
     String localVarPath = "/translations";

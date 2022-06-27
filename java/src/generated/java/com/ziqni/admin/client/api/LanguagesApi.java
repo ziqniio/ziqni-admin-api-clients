@@ -146,6 +146,7 @@ public class LanguagesApi {
     }
   }
 
+  public final static String[] createLanguagesOauthRoles = new String[]{  "AdminLanguage" };
   private HttpRequest.Builder createLanguagesRequestBuilder(List<CreateLanguageRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class LanguagesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminLanguage" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createLanguagesOauthRoles);
 
 
     String localVarPath = "/languages";
@@ -246,12 +247,13 @@ public class LanguagesApi {
     }
   }
 
+  public final static String[] deleteLanguagesOauthRoles = new String[]{  "AdminLanguage" };
   private HttpRequest.Builder deleteLanguagesRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminLanguage" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteLanguagesOauthRoles);
 
 
     String localVarPath = "/languages";
@@ -345,12 +347,13 @@ public class LanguagesApi {
     }
   }
 
+  public final static String[] deleteLanguagesByQueryOauthRoles = new String[]{  "AdminLanguage" };
   private HttpRequest.Builder deleteLanguagesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminLanguage" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteLanguagesByQueryOauthRoles);
 
 
     String localVarPath = "/languages/delete";
@@ -445,12 +448,13 @@ public class LanguagesApi {
     }
   }
 
+  public final static String[] getLanguagesOauthRoles = new String[]{  "ViewLanguage" };
   private HttpRequest.Builder getLanguagesRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewLanguage" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getLanguagesOauthRoles);
 
 
     String localVarPath = "/languages";
@@ -546,12 +550,13 @@ public class LanguagesApi {
     }
   }
 
+  public final static String[] getLanguagesByQueryOauthRoles = new String[]{  "ViewLanguage" };
   private HttpRequest.Builder getLanguagesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewLanguage" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getLanguagesByQueryOauthRoles);
 
 
     String localVarPath = "/languages/query";
@@ -644,12 +649,13 @@ public class LanguagesApi {
     }
   }
 
+  public final static String[] getListOfAllLanguagesOauthRoles = new String[]{  "ViewLanguage" };
   private HttpRequest.Builder getListOfAllLanguagesRequestBuilder(Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewLanguage" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getListOfAllLanguagesOauthRoles);
 
 
     String localVarPath = "/languages/available";
@@ -744,6 +750,7 @@ public class LanguagesApi {
     }
   }
 
+  public final static String[] updateLanguagesOauthRoles = new String[]{  "AdminLanguage" };
   private HttpRequest.Builder updateLanguagesRequestBuilder(List<UpdateLanguageRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -752,8 +759,8 @@ public class LanguagesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminLanguage" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateLanguagesOauthRoles);
 
 
     String localVarPath = "/languages";

@@ -143,12 +143,13 @@ public class UserApi {
     }
   }
 
+  public final static String[] getUserOauthRoles = new String[]{  "ViewUser" };
   private HttpRequest.Builder getUserRequestBuilder(Boolean includeSpaces) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewUser" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getUserOauthRoles);
 
 
     String localVarPath = "/user";
@@ -244,12 +245,13 @@ public class UserApi {
     }
   }
 
+  public final static String[] getUserMessagesOauthRoles = new String[]{  "ViewUser" };
   private HttpRequest.Builder getUserMessagesRequestBuilder(Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewUser" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getUserMessagesOauthRoles);
 
 
     String localVarPath = "/user/inbox";
@@ -344,6 +346,7 @@ public class UserApi {
     }
   }
 
+  public final static String[] getUserMessagesByIdOauthRoles = new String[]{  "ViewUser" };
   private HttpRequest.Builder getUserMessagesByIdRequestBuilder(String id) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -352,8 +355,8 @@ public class UserApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewUser" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getUserMessagesByIdOauthRoles);
 
 
     String localVarPath = "/user/inbox/{id}"

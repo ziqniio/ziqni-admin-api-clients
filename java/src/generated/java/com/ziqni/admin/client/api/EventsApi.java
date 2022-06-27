@@ -145,12 +145,13 @@ public class EventsApi {
     }
   }
 
+  public final static String[] createEventsOauthRoles = new String[]{  "AdminEvents" };
   private HttpRequest.Builder createEventsRequestBuilder(List<CreateEventRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminEvents" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createEventsOauthRoles);
 
 
     String localVarPath = "/events";
@@ -245,12 +246,13 @@ public class EventsApi {
     }
   }
 
+  public final static String[] getEventsOauthRoles = new String[]{  "ViewEvents" };
   private HttpRequest.Builder getEventsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewEvents" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getEventsOauthRoles);
 
 
     String localVarPath = "/events";
@@ -346,12 +348,13 @@ public class EventsApi {
     }
   }
 
+  public final static String[] getEventsByQueryOauthRoles = new String[]{  "ViewEvents" };
   private HttpRequest.Builder getEventsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewEvents" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getEventsByQueryOauthRoles);
 
 
     String localVarPath = "/events/query";

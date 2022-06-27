@@ -145,6 +145,7 @@ public class SpacesApi {
     }
   }
 
+  public final static String[] createSpaceOauthRoles = new String[]{  "ViewSpaces" };
   private HttpRequest.Builder createSpaceRequestBuilder(List<CreateSpaceRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -153,8 +154,8 @@ public class SpacesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewSpaces" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createSpaceOauthRoles);
 
 
     String localVarPath = "/spaces";
@@ -245,6 +246,7 @@ public class SpacesApi {
     }
   }
 
+  public final static String[] deleteSpacesOauthRoles = new String[]{  "AdminSpaces" };
   private HttpRequest.Builder deleteSpacesRequestBuilder(String spaceName) throws ApiException {
     // verify the required parameter 'spaceName' is set
     if (spaceName == null) {
@@ -253,8 +255,8 @@ public class SpacesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminSpaces" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteSpacesOauthRoles);
 
 
     String localVarPath = "/spaces/{spaceName}"
@@ -342,12 +344,13 @@ public class SpacesApi {
     }
   }
 
+  public final static String[] getSpaceInfromationOauthRoles = new String[]{  "ViewSpaces" };
   private HttpRequest.Builder getSpaceInfromationRequestBuilder(Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewSpaces" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getSpaceInfromationOauthRoles);
 
 
     String localVarPath = "/spaces";
@@ -446,6 +449,7 @@ public class SpacesApi {
     }
   }
 
+  public final static String[] getSpacesByNameOauthRoles = new String[]{  "ViewSpaces" };
   private HttpRequest.Builder getSpacesByNameRequestBuilder(String spaceName, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'spaceName' is set
     if (spaceName == null) {
@@ -454,8 +458,8 @@ public class SpacesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewSpaces" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getSpacesByNameOauthRoles);
 
 
     String localVarPath = "/spaces/{spaceName}"
@@ -551,6 +555,7 @@ public class SpacesApi {
     }
   }
 
+  public final static String[] updateSpaceOauthRoles = new String[]{  "AdminSpaces" };
   private HttpRequest.Builder updateSpaceRequestBuilder(UpdateSpaceRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -559,8 +564,8 @@ public class SpacesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminSpaces" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateSpaceOauthRoles);
 
 
     String localVarPath = "/spaces";

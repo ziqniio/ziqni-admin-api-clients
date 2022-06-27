@@ -143,6 +143,7 @@ public class MemberTokenApi {
     }
   }
 
+  public final static String[] createMemberTokenOauthRoles = new String[]{   };
   private HttpRequest.Builder createMemberTokenRequestBuilder(MemberTokenRequest memberTokenRequest) throws ApiException {
     // verify the required parameter 'memberTokenRequest' is set
     if (memberTokenRequest == null) {
@@ -151,8 +152,8 @@ public class MemberTokenApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createMemberTokenOauthRoles);
 
 
     String localVarPath = "/member-token";

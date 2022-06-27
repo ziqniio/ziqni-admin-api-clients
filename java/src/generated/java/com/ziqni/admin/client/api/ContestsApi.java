@@ -150,6 +150,7 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] createContestsOauthRoles = new String[]{  "ManageContest" };
   private HttpRequest.Builder createContestsRequestBuilder(CreateContestForCompetitionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -158,8 +159,8 @@ public class ContestsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createContestsOauthRoles);
 
 
     String localVarPath = "/contests";
@@ -254,6 +255,7 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] getChildrenOfContestOauthRoles = new String[]{  "ViewContest" };
   private HttpRequest.Builder getChildrenOfContestRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -262,8 +264,8 @@ public class ContestsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getChildrenOfContestOauthRoles);
 
 
     String localVarPath = "/contests/{id}/children"
@@ -363,12 +365,13 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] getContestsOauthRoles = new String[]{  "ViewContest" };
   private HttpRequest.Builder getContestsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getContestsOauthRoles);
 
 
     String localVarPath = "/contests";
@@ -464,12 +467,13 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] getContestsByQueryOauthRoles = new String[]{  "ViewContest" };
   private HttpRequest.Builder getContestsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getContestsByQueryOauthRoles);
 
 
     String localVarPath = "/contests/query";
@@ -564,6 +568,7 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] getContestsLeaderboardByIdOauthRoles = new String[]{  "ViewContest" };
   private HttpRequest.Builder getContestsLeaderboardByIdRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -572,8 +577,8 @@ public class ContestsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getContestsLeaderboardByIdOauthRoles);
 
 
     String localVarPath = "/contests/{id}/leaderboard"
@@ -669,6 +674,7 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] getContestsToCloneOauthRoles = new String[]{  "ViewContest" };
   private HttpRequest.Builder getContestsToCloneRequestBuilder(String id) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -677,8 +683,8 @@ public class ContestsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getContestsToCloneOauthRoles);
 
 
     String localVarPath = "/contests/{id}/clone"
@@ -768,6 +774,7 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] getListOfEntrantsForContestOauthRoles = new String[]{  "ViewContest" };
   private HttpRequest.Builder getListOfEntrantsForContestRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -776,8 +783,8 @@ public class ContestsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getListOfEntrantsForContestOauthRoles);
 
 
     String localVarPath = "/contests/{id}/entries"
@@ -877,6 +884,7 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] getParentsOfContestOauthRoles = new String[]{  "ViewContest" };
   private HttpRequest.Builder getParentsOfContestRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -885,8 +893,8 @@ public class ContestsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getParentsOfContestOauthRoles);
 
 
     String localVarPath = "/contests/{id}/parents"
@@ -982,6 +990,7 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] updateContestOauthRoles = new String[]{  "ManageContest" };
   private HttpRequest.Builder updateContestRequestBuilder(UpdateContestRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -990,8 +999,8 @@ public class ContestsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateContestOauthRoles);
 
 
     String localVarPath = "/contests";
@@ -1082,12 +1091,13 @@ public class ContestsApi {
     }
   }
 
+  public final static String[] updateContestsStateOauthRoles = new String[]{  "ManageContest" };
   private HttpRequest.Builder updateContestsStateRequestBuilder(List<UpdateContestStateRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageContest" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateContestsStateOauthRoles);
 
 
     String localVarPath = "/contests/state";

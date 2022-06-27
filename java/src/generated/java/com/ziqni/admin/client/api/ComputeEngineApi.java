@@ -146,6 +146,7 @@ public class ComputeEngineApi {
     }
   }
 
+  public final static String[] createComputeEnginesOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder createComputeEnginesRequestBuilder(CreateComputeEngineRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class ComputeEngineApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createComputeEnginesOauthRoles);
 
 
     String localVarPath = "/compute-engines";
@@ -246,6 +247,7 @@ public class ComputeEngineApi {
     }
   }
 
+  public final static String[] deleteComputeEnginesByIdOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder deleteComputeEnginesByIdRequestBuilder(String id) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -254,8 +256,8 @@ public class ComputeEngineApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteComputeEnginesByIdOauthRoles);
 
 
     String localVarPath = "/compute-engines/{id}"
@@ -341,12 +343,13 @@ public class ComputeEngineApi {
     }
   }
 
+  public final static String[] deleteComputeEnginesByQueryOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder deleteComputeEnginesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteComputeEnginesByQueryOauthRoles);
 
 
     String localVarPath = "/compute-engines/delete";
@@ -441,12 +444,13 @@ public class ComputeEngineApi {
     }
   }
 
+  public final static String[] getComputeEnginesOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder getComputeEnginesRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getComputeEnginesOauthRoles);
 
 
     String localVarPath = "/compute-engines";
@@ -542,6 +546,7 @@ public class ComputeEngineApi {
     }
   }
 
+  public final static String[] getComputeEnginesByIdOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder getComputeEnginesByIdRequestBuilder(String id) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -550,8 +555,8 @@ public class ComputeEngineApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getComputeEnginesByIdOauthRoles);
 
 
     String localVarPath = "/compute-engines/{id}"
@@ -637,12 +642,13 @@ public class ComputeEngineApi {
     }
   }
 
+  public final static String[] getComputeEnginesByQueryOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder getComputeEnginesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getComputeEnginesByQueryOauthRoles);
 
 
     String localVarPath = "/compute-engines/query";
@@ -733,6 +739,7 @@ public class ComputeEngineApi {
     }
   }
 
+  public final static String[] updateComputeEnginesOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder updateComputeEnginesRequestBuilder(UpdateComputeEngineRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -741,8 +748,8 @@ public class ComputeEngineApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateComputeEnginesOauthRoles);
 
 
     String localVarPath = "/compute-engines";

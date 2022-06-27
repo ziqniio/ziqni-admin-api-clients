@@ -150,6 +150,7 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] createAchievementsOauthRoles = new String[]{  "ManageAchievements" };
   private HttpRequest.Builder createAchievementsRequestBuilder(List<CreateAchievementRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -158,8 +159,8 @@ public class AchievementsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageAchievements" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createAchievementsOauthRoles);
 
 
     String localVarPath = "/achievements";
@@ -250,12 +251,13 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] deleteAchievementsOauthRoles = new String[]{  "ManageAchievements" };
   private HttpRequest.Builder deleteAchievementsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageAchievements" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteAchievementsOauthRoles);
 
 
     String localVarPath = "/achievements";
@@ -349,12 +351,13 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] deleteAchievementsByQueryOauthRoles = new String[]{  "AdminAchievements" };
   private HttpRequest.Builder deleteAchievementsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminAchievements" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteAchievementsByQueryOauthRoles);
 
 
     String localVarPath = "/achievements/delete";
@@ -445,6 +448,7 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] getAchievementToCloneOauthRoles = new String[]{  "ViewAchievement" };
   private HttpRequest.Builder getAchievementToCloneRequestBuilder(String id) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -453,8 +457,8 @@ public class AchievementsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAchievementToCloneOauthRoles);
 
 
     String localVarPath = "/achievements/{id}/clone"
@@ -544,12 +548,13 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] getAchievementsOauthRoles = new String[]{  "ViewAchievement" };
   private HttpRequest.Builder getAchievementsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAchievementsOauthRoles);
 
 
     String localVarPath = "/achievements";
@@ -645,12 +650,13 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] getAchievementsByQueryOauthRoles = new String[]{  "ViewAchievement" };
   private HttpRequest.Builder getAchievementsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAchievementsByQueryOauthRoles);
 
 
     String localVarPath = "/achievements/query";
@@ -745,6 +751,7 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] getAntecendentsForAchievementOauthRoles = new String[]{  "ViewAchievement" };
   private HttpRequest.Builder getAntecendentsForAchievementRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -753,8 +760,8 @@ public class AchievementsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAntecendentsForAchievementOauthRoles);
 
 
     String localVarPath = "/achievements/{id}/antecedents"
@@ -854,6 +861,7 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] getDesendentsForAchievementOauthRoles = new String[]{  "ViewAchievement" };
   private HttpRequest.Builder getDesendentsForAchievementRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -862,8 +870,8 @@ public class AchievementsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getDesendentsForAchievementOauthRoles);
 
 
     String localVarPath = "/achievements/{id}/descendents"
@@ -959,6 +967,7 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] getIssuedAchievementsCountByIdOauthRoles = new String[]{  "ViewAchievement" };
   private HttpRequest.Builder getIssuedAchievementsCountByIdRequestBuilder(String id) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -967,8 +976,8 @@ public class AchievementsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getIssuedAchievementsCountByIdOauthRoles);
 
 
     String localVarPath = "/achievements/{id}/issued"
@@ -1060,6 +1069,7 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] getMembersAchievementsDetailsOauthRoles = new String[]{  "ViewAchievement" };
   private HttpRequest.Builder getMembersAchievementsDetailsRequestBuilder(String id, String memberId, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -1068,8 +1078,8 @@ public class AchievementsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAchievement" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getMembersAchievementsDetailsOauthRoles);
 
 
     String localVarPath = "/achievements/{id}/members"
@@ -1166,6 +1176,7 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] updateAchievementsOauthRoles = new String[]{  "ManageAchievements" };
   private HttpRequest.Builder updateAchievementsRequestBuilder(List<UpdateAchievementRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -1174,8 +1185,8 @@ public class AchievementsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageAchievements" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateAchievementsOauthRoles);
 
 
     String localVarPath = "/achievements";
@@ -1266,12 +1277,13 @@ public class AchievementsApi {
     }
   }
 
+  public final static String[] updateAchievementsLiveStatusOauthRoles = new String[]{  "ManageAchievements" };
   private HttpRequest.Builder updateAchievementsLiveStatusRequestBuilder(List<AchievementLiveStatusRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageAchievements" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateAchievementsLiveStatusOauthRoles);
 
 
     String localVarPath = "/achievements/state";

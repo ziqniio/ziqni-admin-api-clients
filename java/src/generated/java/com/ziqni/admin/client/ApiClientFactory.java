@@ -57,10 +57,10 @@ public abstract class ApiClientFactory {
 
         ApiClientFactory.initialised = true;
 
-        if(AdminApiClientConfig.isWebsocket()) {
+        if(AdminApiClientConfig.isWebsocket())
             streamingClient = new StreamingClient(new WsAddress().getAddress());
-            logger.info("streaming client initialised [{}]", streamingClient.isConnected());
-        }
+
+        logger.info("streaming client initialised [{}]", streamingClient.isConnected());
     }
 
     private static void init() {

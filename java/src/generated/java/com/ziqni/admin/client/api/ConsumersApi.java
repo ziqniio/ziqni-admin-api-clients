@@ -153,6 +153,7 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] createKafkaConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder createKafkaConnectionsRequestBuilder(CreateKafkaConnectionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -161,8 +162,8 @@ public class ConsumersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createKafkaConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/kafka";
@@ -253,6 +254,7 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] createRabbitMQConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder createRabbitMQConnectionsRequestBuilder(CreateRabbitMqConnectionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -261,8 +263,8 @@ public class ConsumersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createRabbitMQConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/rabbitmq";
@@ -353,6 +355,7 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] createSqsConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder createSqsConnectionsRequestBuilder(CreateSqsConnectionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -361,8 +364,8 @@ public class ConsumersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createSqsConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/sqs";
@@ -453,12 +456,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] deleteKafkaConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder deleteKafkaConnectionsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteKafkaConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/kafka";
@@ -552,12 +556,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] deleteKafkaConnectionsByQueryOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder deleteKafkaConnectionsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteKafkaConnectionsByQueryOauthRoles);
 
 
     String localVarPath = "/connections/kafka/delete";
@@ -648,12 +653,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] deleteRabbitMQConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder deleteRabbitMQConnectionsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteRabbitMQConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/rabbitmq";
@@ -747,12 +753,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] deleteRabbitMQConnectionsByQueryOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder deleteRabbitMQConnectionsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteRabbitMQConnectionsByQueryOauthRoles);
 
 
     String localVarPath = "/connections/rabbitmq/delete";
@@ -843,12 +850,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] deleteSqsConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder deleteSqsConnectionsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteSqsConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/sqs";
@@ -942,12 +950,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] deleteSqsConnectionsByQueryOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder deleteSqsConnectionsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteSqsConnectionsByQueryOauthRoles);
 
 
     String localVarPath = "/connections/sqs/delete";
@@ -1042,12 +1051,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] getKafkaConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder getKafkaConnectionsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getKafkaConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/kafka";
@@ -1143,12 +1153,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] getKafkaConnectionsByQueryOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder getKafkaConnectionsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getKafkaConnectionsByQueryOauthRoles);
 
 
     String localVarPath = "/connections/kafka/query";
@@ -1243,12 +1254,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] getRabbitMQConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder getRabbitMQConnectionsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getRabbitMQConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/rabbitmq";
@@ -1344,12 +1356,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] getRabbitMQConnectionsByQueryOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder getRabbitMQConnectionsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getRabbitMQConnectionsByQueryOauthRoles);
 
 
     String localVarPath = "/connections/rabbitmq/query";
@@ -1444,12 +1457,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] getSqsConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder getSqsConnectionsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getSqsConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/sqs";
@@ -1545,12 +1559,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] getSqsConnectionsByQueryOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder getSqsConnectionsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getSqsConnectionsByQueryOauthRoles);
 
 
     String localVarPath = "/connections/sqs/query";
@@ -1641,12 +1656,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] updateConnectionsStateOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder updateConnectionsStateRequestBuilder(List<UpdateConnectionStateRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateConnectionsStateOauthRoles);
 
 
     String localVarPath = "/connections/state";
@@ -1737,6 +1753,7 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] updateKafkaConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder updateKafkaConnectionsRequestBuilder(UpdateKafkaConnectionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -1745,8 +1762,8 @@ public class ConsumersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateKafkaConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/kafka";
@@ -1837,12 +1854,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] updateKafkaConnectionsStateOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder updateKafkaConnectionsStateRequestBuilder(List<UpdateConnectionStateRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateKafkaConnectionsStateOauthRoles);
 
 
     String localVarPath = "/connections/kafka/state";
@@ -1933,6 +1951,7 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] updateRabbitMQConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder updateRabbitMQConnectionsRequestBuilder(UpdateRabbitMqConnectionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -1941,8 +1960,8 @@ public class ConsumersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateRabbitMQConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/rabbitmq";
@@ -2033,12 +2052,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] updateRabbitMQConnectionsStateOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder updateRabbitMQConnectionsStateRequestBuilder(List<UpdateConnectionStateRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateRabbitMQConnectionsStateOauthRoles);
 
 
     String localVarPath = "/connections/rabbitmq/state";
@@ -2129,6 +2149,7 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] updateSqsConnectionsOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder updateSqsConnectionsRequestBuilder(UpdateSqsConnectionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -2137,8 +2158,8 @@ public class ConsumersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateSqsConnectionsOauthRoles);
 
 
     String localVarPath = "/connections/sqs";
@@ -2229,12 +2250,13 @@ public class ConsumersApi {
     }
   }
 
+  public final static String[] updateSqsConnectionsStateOauthRoles = new String[]{  "AdminConsumer" };
   private HttpRequest.Builder updateSqsConnectionsStateRequestBuilder(List<UpdateConnectionStateRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminConsumer" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateSqsConnectionsStateOauthRoles);
 
 
     String localVarPath = "/connections/sqs/state";

@@ -127,6 +127,7 @@ public class DefaultApi {
     }
   }
 
+  public final static String[] deleteSpaceOauthRoles = new String[]{  "Owner","Collaborator" };
   private HttpRequest.Builder deleteSpaceRequestBuilder(String name) throws ApiException {
     // verify the required parameter 'name' is set
     if (name == null) {
@@ -135,8 +136,8 @@ public class DefaultApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "Owner","Collaborator" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteSpaceOauthRoles);
 
 
     String localVarPath = "/spaces";

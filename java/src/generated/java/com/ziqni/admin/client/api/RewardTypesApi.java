@@ -146,6 +146,7 @@ public class RewardTypesApi {
     }
   }
 
+  public final static String[] createRewardTypesOauthRoles = new String[]{  "ManageRewardType" };
   private HttpRequest.Builder createRewardTypesRequestBuilder(List<CreateRewardTypeRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class RewardTypesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageRewardType" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createRewardTypesOauthRoles);
 
 
     String localVarPath = "/reward-types";
@@ -246,12 +247,13 @@ public class RewardTypesApi {
     }
   }
 
+  public final static String[] deleteRewardTypesOauthRoles = new String[]{  "AdminRewardType" };
   private HttpRequest.Builder deleteRewardTypesRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminRewardType" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteRewardTypesOauthRoles);
 
 
     String localVarPath = "/reward-types";
@@ -345,12 +347,13 @@ public class RewardTypesApi {
     }
   }
 
+  public final static String[] deleteRewardTypesByQueryOauthRoles = new String[]{  "AdminRewardType" };
   private HttpRequest.Builder deleteRewardTypesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminRewardType" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteRewardTypesByQueryOauthRoles);
 
 
     String localVarPath = "/reward-types/delete";
@@ -445,12 +448,13 @@ public class RewardTypesApi {
     }
   }
 
+  public final static String[] getRewardTypesOauthRoles = new String[]{  "ViewRewardType" };
   private HttpRequest.Builder getRewardTypesRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewRewardType" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getRewardTypesOauthRoles);
 
 
     String localVarPath = "/reward-types";
@@ -546,12 +550,13 @@ public class RewardTypesApi {
     }
   }
 
+  public final static String[] getRewardTypesByQueryOauthRoles = new String[]{  "ViewRewardType" };
   private HttpRequest.Builder getRewardTypesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewRewardType" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getRewardTypesByQueryOauthRoles);
 
 
     String localVarPath = "/reward-types/query";
@@ -642,6 +647,7 @@ public class RewardTypesApi {
     }
   }
 
+  public final static String[] updateRewardTypesOauthRoles = new String[]{  "ManageRewardType" };
   private HttpRequest.Builder updateRewardTypesRequestBuilder(List<UpdateRewardTypeRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -650,8 +656,8 @@ public class RewardTypesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageRewardType" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateRewardTypesOauthRoles);
 
 
     String localVarPath = "/reward-types";

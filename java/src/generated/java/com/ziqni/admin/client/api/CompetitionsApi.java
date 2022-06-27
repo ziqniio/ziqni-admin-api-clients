@@ -154,6 +154,7 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] createCompetitionsOauthRoles = new String[]{  "ManageCompetition" };
   private HttpRequest.Builder createCompetitionsRequestBuilder(CreateCompetitionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -162,8 +163,8 @@ public class CompetitionsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageCompetition" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createCompetitionsOauthRoles);
 
 
     String localVarPath = "/competitions";
@@ -254,6 +255,7 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] createSimpleCompetitionsOauthRoles = new String[]{  "ManageCompetition" };
   private HttpRequest.Builder createSimpleCompetitionsRequestBuilder(CreateSimpleCompetitionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -262,8 +264,8 @@ public class CompetitionsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageCompetition" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createSimpleCompetitionsOauthRoles);
 
 
     String localVarPath = "/competitions/simple";
@@ -358,12 +360,13 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] getCompetitionsOauthRoles = new String[]{  "ViewCompetitions" };
   private HttpRequest.Builder getCompetitionsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewCompetitions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCompetitionsOauthRoles);
 
 
     String localVarPath = "/competitions";
@@ -463,6 +466,7 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] getCompetitionsBracketsOauthRoles = new String[]{  "ViewCompetitions" };
   private HttpRequest.Builder getCompetitionsBracketsRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -471,8 +475,8 @@ public class CompetitionsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewCompetitions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCompetitionsBracketsOauthRoles);
 
 
     String localVarPath = "/competitions/{id}/brackets"
@@ -568,12 +572,13 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] getCompetitionsByQueryOauthRoles = new String[]{  "ViewCompetitions" };
   private HttpRequest.Builder getCompetitionsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewCompetitions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCompetitionsByQueryOauthRoles);
 
 
     String localVarPath = "/competitions/query";
@@ -664,6 +669,7 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] getCompetitionsToCloneOauthRoles = new String[]{  "ViewCompetitions" };
   private HttpRequest.Builder getCompetitionsToCloneRequestBuilder(String id) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -672,8 +678,8 @@ public class CompetitionsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewCompetitions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCompetitionsToCloneOauthRoles);
 
 
     String localVarPath = "/competitions/{id}/clone"
@@ -763,6 +769,7 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] getContestsForCompetitionsOauthRoles = new String[]{  "ViewCompetitions" };
   private HttpRequest.Builder getContestsForCompetitionsRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -771,8 +778,8 @@ public class CompetitionsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewCompetitions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getContestsForCompetitionsOauthRoles);
 
 
     String localVarPath = "/competitions/{id}/contests"
@@ -872,6 +879,7 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] getLeaderboardByCompetitionIdOauthRoles = new String[]{  "ViewCompetitions" };
   private HttpRequest.Builder getLeaderboardByCompetitionIdRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -880,8 +888,8 @@ public class CompetitionsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewCompetitions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getLeaderboardByCompetitionIdOauthRoles);
 
 
     String localVarPath = "/competitions/{id}/leaderboard"
@@ -981,6 +989,7 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] getListOfEntrantsOauthRoles = new String[]{  "ViewCompetitions" };
   private HttpRequest.Builder getListOfEntrantsRequestBuilder(String id, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -989,8 +998,8 @@ public class CompetitionsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewCompetitions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getListOfEntrantsOauthRoles);
 
 
     String localVarPath = "/competitions/{id}/entries"
@@ -1086,6 +1095,7 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] updateCompetitionsOauthRoles = new String[]{  "ManageCompetition" };
   private HttpRequest.Builder updateCompetitionsRequestBuilder(UpdateCompetitionRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -1094,8 +1104,8 @@ public class CompetitionsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageCompetition" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateCompetitionsOauthRoles);
 
 
     String localVarPath = "/competitions";
@@ -1186,12 +1196,13 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] updateCompetitionsEntriesOauthRoles = new String[]{  "ManageCompetition" };
   private HttpRequest.Builder updateCompetitionsEntriesRequestBuilder(List<EntrantRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageCompetition" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateCompetitionsEntriesOauthRoles);
 
 
     String localVarPath = "/competitions/entries";
@@ -1282,12 +1293,13 @@ public class CompetitionsApi {
     }
   }
 
+  public final static String[] updateCompetitionsStateOauthRoles = new String[]{  "ManageCompetition" };
   private HttpRequest.Builder updateCompetitionsStateRequestBuilder(List<UpdateCompetitionStatusRequest> body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageCompetition" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateCompetitionsStateOauthRoles);
 
 
     String localVarPath = "/competitions/state";

@@ -146,6 +146,7 @@ public class FileRepositoriesApi {
     }
   }
 
+  public final static String[] createFileRepositoriesOauthRoles = new String[]{  "ManageFileObjectRep" };
   private HttpRequest.Builder createFileRepositoriesRequestBuilder(List<CreateRepositoryRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class FileRepositoriesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageFileObjectRep" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createFileRepositoriesOauthRoles);
 
 
     String localVarPath = "/file-repositories";
@@ -248,12 +249,13 @@ public class FileRepositoriesApi {
     }
   }
 
+  public final static String[] deleteFileRepositoriesOauthRoles = new String[]{  "ManageFileObjectRep" };
   private HttpRequest.Builder deleteFileRepositoriesRequestBuilder(List<String> id, Boolean permanent) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageFileObjectRep" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteFileRepositoriesOauthRoles);
 
 
     String localVarPath = "/file-repositories";
@@ -348,12 +350,13 @@ public class FileRepositoriesApi {
     }
   }
 
+  public final static String[] deleteFileRepositoriesByQueryOauthRoles = new String[]{  "ManageFileObjectRep" };
   private HttpRequest.Builder deleteFileRepositoriesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageFileObjectRep" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteFileRepositoriesByQueryOauthRoles);
 
 
     String localVarPath = "/file-repositories/delete";
@@ -448,12 +451,13 @@ public class FileRepositoriesApi {
     }
   }
 
+  public final static String[] getFileRepositoriesOauthRoles = new String[]{  "ManageFileObjectRep" };
   private HttpRequest.Builder getFileRepositoriesRequestBuilder(Integer limit, Integer skip, List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageFileObjectRep" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getFileRepositoriesOauthRoles);
 
 
     String localVarPath = "/file-repositories";
@@ -549,12 +553,13 @@ public class FileRepositoriesApi {
     }
   }
 
+  public final static String[] getFileRepositoriesByQueryOauthRoles = new String[]{  "ManageFileObjectRep" };
   private HttpRequest.Builder getFileRepositoriesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageFileObjectRep" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getFileRepositoriesByQueryOauthRoles);
 
 
     String localVarPath = "/file-repositories/query";
@@ -645,6 +650,7 @@ public class FileRepositoriesApi {
     }
   }
 
+  public final static String[] updateFileRepositoriesOauthRoles = new String[]{  "ManageFileObjectRep" };
   private HttpRequest.Builder updateFileRepositoriesRequestBuilder(List<UpdateRepositoryRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -653,8 +659,8 @@ public class FileRepositoriesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageFileObjectRep" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateFileRepositoriesOauthRoles);
 
 
     String localVarPath = "/file-repositories";

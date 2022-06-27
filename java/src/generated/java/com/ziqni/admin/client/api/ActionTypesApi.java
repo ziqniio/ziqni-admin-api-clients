@@ -146,6 +146,7 @@ public class ActionTypesApi {
     }
   }
 
+  public final static String[] createActionTypesOauthRoles = new String[]{  "AdminActions" };
   private HttpRequest.Builder createActionTypesRequestBuilder(List<CreateActionTypeRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class ActionTypesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminActions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createActionTypesOauthRoles);
 
 
     String localVarPath = "/action-types";
@@ -246,12 +247,13 @@ public class ActionTypesApi {
     }
   }
 
+  public final static String[] deleteActionTypesOauthRoles = new String[]{  "AdminActions" };
   private HttpRequest.Builder deleteActionTypesRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminActions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteActionTypesOauthRoles);
 
 
     String localVarPath = "/action-types";
@@ -345,12 +347,13 @@ public class ActionTypesApi {
     }
   }
 
+  public final static String[] deleteActionTypesByQueryOauthRoles = new String[]{  "AdminActions" };
   private HttpRequest.Builder deleteActionTypesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminActions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteActionTypesByQueryOauthRoles);
 
 
     String localVarPath = "/action-types/delete";
@@ -445,12 +448,13 @@ public class ActionTypesApi {
     }
   }
 
+  public final static String[] getActionTypesOauthRoles = new String[]{  "ViewActions" };
   private HttpRequest.Builder getActionTypesRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewActions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getActionTypesOauthRoles);
 
 
     String localVarPath = "/action-types";
@@ -546,12 +550,13 @@ public class ActionTypesApi {
     }
   }
 
+  public final static String[] getActionTypesByQueryOauthRoles = new String[]{  "ViewActions" };
   private HttpRequest.Builder getActionTypesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewActions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getActionTypesByQueryOauthRoles);
 
 
     String localVarPath = "/action-types/query";
@@ -642,6 +647,7 @@ public class ActionTypesApi {
     }
   }
 
+  public final static String[] updateActionTypesOauthRoles = new String[]{  "AdminActions" };
   private HttpRequest.Builder updateActionTypesRequestBuilder(List<UpdateActionTypeRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -650,8 +656,8 @@ public class ActionTypesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminActions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateActionTypesOauthRoles);
 
 
     String localVarPath = "/action-types";

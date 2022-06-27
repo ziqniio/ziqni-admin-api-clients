@@ -146,6 +146,7 @@ public class MemberMessagesApi {
     }
   }
 
+  public final static String[] createMemberMessagesOauthRoles = new String[]{  "ManageMessages" };
   private HttpRequest.Builder createMemberMessagesRequestBuilder(List<CreateMemberMessageRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class MemberMessagesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createMemberMessagesOauthRoles);
 
 
     String localVarPath = "/member-messages";
@@ -246,12 +247,13 @@ public class MemberMessagesApi {
     }
   }
 
+  public final static String[] deleteMemberMessagesOauthRoles = new String[]{  "ManageMessages" };
   private HttpRequest.Builder deleteMemberMessagesRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteMemberMessagesOauthRoles);
 
 
     String localVarPath = "/member-messages";
@@ -345,12 +347,13 @@ public class MemberMessagesApi {
     }
   }
 
+  public final static String[] deleteMemberMessagesByQueryOauthRoles = new String[]{  "AdminMessages" };
   private HttpRequest.Builder deleteMemberMessagesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteMemberMessagesByQueryOauthRoles);
 
 
     String localVarPath = "/member-messages/delete";
@@ -445,12 +448,13 @@ public class MemberMessagesApi {
     }
   }
 
+  public final static String[] getMemberMessagesOauthRoles = new String[]{  "ViewMessages" };
   private HttpRequest.Builder getMemberMessagesRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getMemberMessagesOauthRoles);
 
 
     String localVarPath = "/member-messages";
@@ -546,12 +550,13 @@ public class MemberMessagesApi {
     }
   }
 
+  public final static String[] getMemberMessagesByQueryOauthRoles = new String[]{  "ViewMessages" };
   private HttpRequest.Builder getMemberMessagesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getMemberMessagesByQueryOauthRoles);
 
 
     String localVarPath = "/member-messages/query";
@@ -642,6 +647,7 @@ public class MemberMessagesApi {
     }
   }
 
+  public final static String[] updateMemberMessagesStatusOauthRoles = new String[]{  "ManageMessages" };
   private HttpRequest.Builder updateMemberMessagesStatusRequestBuilder(List<UpdateMessageStatusRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -650,8 +656,8 @@ public class MemberMessagesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageMessages" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateMemberMessagesStatusOauthRoles);
 
 
     String localVarPath = "/member-messages/state";

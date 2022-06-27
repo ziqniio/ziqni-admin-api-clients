@@ -149,6 +149,7 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] createProductsOauthRoles = new String[]{  "AdminProducts" };
   private HttpRequest.Builder createProductsRequestBuilder(List<CreateProductRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -157,8 +158,8 @@ public class ProductsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createProductsOauthRoles);
 
 
     String localVarPath = "/products";
@@ -249,12 +250,13 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] deleteProductsOauthRoles = new String[]{  "AdminProducts" };
   private HttpRequest.Builder deleteProductsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteProductsOauthRoles);
 
 
     String localVarPath = "/products";
@@ -348,12 +350,13 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] deleteProductsByQueryOauthRoles = new String[]{  "AdminProducts" };
   private HttpRequest.Builder deleteProductsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteProductsByQueryOauthRoles);
 
 
     String localVarPath = "/products/delete";
@@ -450,6 +453,7 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] getAchievementsForProductsOauthRoles = new String[]{  "ViewProducts" };
   private HttpRequest.Builder getAchievementsForProductsRequestBuilder(String id, String achievementId, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -458,8 +462,8 @@ public class ProductsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAchievementsForProductsOauthRoles);
 
 
     String localVarPath = "/products/{id}/achievements"
@@ -562,6 +566,7 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] getCompetitionsForProductsOauthRoles = new String[]{  "ViewProducts" };
   private HttpRequest.Builder getCompetitionsForProductsRequestBuilder(String id, String competitionId, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -570,8 +575,8 @@ public class ProductsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getCompetitionsForProductsOauthRoles);
 
 
     String localVarPath = "/products/{id}/competitions"
@@ -674,6 +679,7 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] getContestsForProductsOauthRoles = new String[]{  "ViewProducts" };
   private HttpRequest.Builder getContestsForProductsRequestBuilder(String id, String contestId, Integer limit, Integer skip) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -682,8 +688,8 @@ public class ProductsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getContestsForProductsOauthRoles);
 
 
     String localVarPath = "/products/{id}/contests"
@@ -784,12 +790,13 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] getProductsOauthRoles = new String[]{  "ViewProducts" };
   private HttpRequest.Builder getProductsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getProductsOauthRoles);
 
 
     String localVarPath = "/products";
@@ -885,12 +892,13 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] getProductsByQueryOauthRoles = new String[]{  "ViewProducts" };
   private HttpRequest.Builder getProductsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getProductsByQueryOauthRoles);
 
 
     String localVarPath = "/products/query";
@@ -985,12 +993,13 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] getProductsByRefIdOauthRoles = new String[]{  "ViewProducts" };
   private HttpRequest.Builder getProductsByRefIdRequestBuilder(List<String> refIds, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getProductsByRefIdOauthRoles);
 
 
     String localVarPath = "/products/find-by-ref-identifiers/";
@@ -1086,6 +1095,7 @@ public class ProductsApi {
     }
   }
 
+  public final static String[] updateProductsOauthRoles = new String[]{  "ManageProducts" };
   private HttpRequest.Builder updateProductsRequestBuilder(List<UpdateProductRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -1094,8 +1104,8 @@ public class ProductsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageProducts" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateProductsOauthRoles);
 
 
     String localVarPath = "/products";

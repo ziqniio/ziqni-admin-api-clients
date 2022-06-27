@@ -146,6 +146,7 @@ public class UnitsOfMeasureApi {
     }
   }
 
+  public final static String[] createUnitsOfMeasureOauthRoles = new String[]{  "AdminUOM" };
   private HttpRequest.Builder createUnitsOfMeasureRequestBuilder(List<CreateUnitOfMeasureRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class UnitsOfMeasureApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminUOM" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createUnitsOfMeasureOauthRoles);
 
 
     String localVarPath = "/units-of-measure";
@@ -246,12 +247,13 @@ public class UnitsOfMeasureApi {
     }
   }
 
+  public final static String[] deleteCollaboratorsByQueryOauthRoles = new String[]{  "AdminUOM" };
   private HttpRequest.Builder deleteCollaboratorsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminUOM" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteCollaboratorsByQueryOauthRoles);
 
 
     String localVarPath = "/collaborators/delete";
@@ -342,12 +344,13 @@ public class UnitsOfMeasureApi {
     }
   }
 
+  public final static String[] deleteUnitsOfMeasureOauthRoles = new String[]{  "AdminUOM" };
   private HttpRequest.Builder deleteUnitsOfMeasureRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminUOM" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteUnitsOfMeasureOauthRoles);
 
 
     String localVarPath = "/units-of-measure";
@@ -441,12 +444,13 @@ public class UnitsOfMeasureApi {
     }
   }
 
+  public final static String[] deleteUnitsOfMeasureByQueryOauthRoles = new String[]{  "AdminUOM" };
   private HttpRequest.Builder deleteUnitsOfMeasureByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminUOM" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteUnitsOfMeasureByQueryOauthRoles);
 
 
     String localVarPath = "/units-of-measure/delete";
@@ -541,12 +545,13 @@ public class UnitsOfMeasureApi {
     }
   }
 
+  public final static String[] getUnitsOfMeasureOauthRoles = new String[]{  "ViewUOM" };
   private HttpRequest.Builder getUnitsOfMeasureRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewUOM" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getUnitsOfMeasureOauthRoles);
 
 
     String localVarPath = "/units-of-measure";
@@ -642,12 +647,13 @@ public class UnitsOfMeasureApi {
     }
   }
 
+  public final static String[] getUnitsOfMeasureByQueryOauthRoles = new String[]{  "ViewUOM" };
   private HttpRequest.Builder getUnitsOfMeasureByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewUOM" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getUnitsOfMeasureByQueryOauthRoles);
 
 
     String localVarPath = "/units-of-measure/query";
@@ -738,6 +744,7 @@ public class UnitsOfMeasureApi {
     }
   }
 
+  public final static String[] updateUnitsOfMeasureOauthRoles = new String[]{  "ManageUOM" };
   private HttpRequest.Builder updateUnitsOfMeasureRequestBuilder(List<UpdateUnitOfMeasureRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -746,8 +753,8 @@ public class UnitsOfMeasureApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageUOM" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateUnitsOfMeasureOauthRoles);
 
 
     String localVarPath = "/units-of-measure";

@@ -145,6 +145,7 @@ public class AwardsApi {
     }
   }
 
+  public final static String[] claimAwardsOauthRoles = new String[]{  "AdminClaim" };
   private HttpRequest.Builder claimAwardsRequestBuilder(List<ClaimAwardRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -153,8 +154,8 @@ public class AwardsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminClaim" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,claimAwardsOauthRoles);
 
 
     String localVarPath = "/awards/claim";
@@ -249,12 +250,13 @@ public class AwardsApi {
     }
   }
 
+  public final static String[] getAwardsOauthRoles = new String[]{  "ViewAwards" };
   private HttpRequest.Builder getAwardsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAwards" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAwardsOauthRoles);
 
 
     String localVarPath = "/awards";
@@ -350,12 +352,13 @@ public class AwardsApi {
     }
   }
 
+  public final static String[] getAwardsByQueryOauthRoles = new String[]{  "ViewAwards" };
   private HttpRequest.Builder getAwardsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewAwards" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getAwardsByQueryOauthRoles);
 
 
     String localVarPath = "/awards/query";

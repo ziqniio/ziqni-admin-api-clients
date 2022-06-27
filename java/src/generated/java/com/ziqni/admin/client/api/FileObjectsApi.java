@@ -149,6 +149,7 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] copyFileObjectsOauthRoles = new String[]{  "ManageObjects" };
   private HttpRequest.Builder copyFileObjectsRequestBuilder(UpdateFileObjectRequest body, List<String> id) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -157,8 +158,8 @@ public class FileObjectsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,copyFileObjectsOauthRoles);
 
 
     String localVarPath = "/file-objects/copy";
@@ -258,6 +259,7 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] createFileObjectsOauthRoles = new String[]{  "ManageObjects" };
   private HttpRequest.Builder createFileObjectsRequestBuilder(CreateFileObjectRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -266,8 +268,8 @@ public class FileObjectsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createFileObjectsOauthRoles);
 
 
     String localVarPath = "/file-objects";
@@ -360,12 +362,13 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] deleteFileObjectsOauthRoles = new String[]{  "ManageObjects" };
   private HttpRequest.Builder deleteFileObjectsRequestBuilder(List<String> id, Boolean permanent) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteFileObjectsOauthRoles);
 
 
     String localVarPath = "/file-objects";
@@ -462,12 +465,13 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] deleteFileObjectsByQueryOauthRoles = new String[]{  "AdminObjects" };
   private HttpRequest.Builder deleteFileObjectsByQueryRequestBuilder(List<String> id, QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteFileObjectsByQueryOauthRoles);
 
 
     String localVarPath = "/file-objects/delete";
@@ -567,12 +571,13 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] downloadFileObjectsOauthRoles = new String[]{  "ManageObjects" };
   private HttpRequest.Builder downloadFileObjectsRequestBuilder(String path) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,downloadFileObjectsOauthRoles);
 
 
     String localVarPath = "/file-objects/download";
@@ -672,12 +677,13 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] getFileObjectsOauthRoles = new String[]{  "ViewObjects" };
   private HttpRequest.Builder getFileObjectsRequestBuilder(Integer limit, Integer skip, List<String> id, String download) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getFileObjectsOauthRoles);
 
 
     String localVarPath = "/file-objects";
@@ -776,12 +782,13 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] getFileObjectsByQueryOauthRoles = new String[]{  "ViewObjects" };
   private HttpRequest.Builder getFileObjectsByQueryRequestBuilder(List<String> id, QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getFileObjectsByQueryOauthRoles);
 
 
     String localVarPath = "/file-objects/query";
@@ -889,12 +896,13 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] saveTemplatesOauthRoles = new String[]{  "ManageObjects" };
   private HttpRequest.Builder saveTemplatesRequestBuilder(String parentFolderPath, String repositoryId, String templateToSave, String templateName, String tags) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,saveTemplatesOauthRoles);
 
 
     String localVarPath = "/file-objects/save-template";
@@ -979,6 +987,7 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] updateFileObjectsOauthRoles = new String[]{  "ManageObjects" };
   private HttpRequest.Builder updateFileObjectsRequestBuilder(List<UpdateFileObjectRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -987,8 +996,8 @@ public class FileObjectsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateFileObjectsOauthRoles);
 
 
     String localVarPath = "/file-objects";
@@ -1085,12 +1094,13 @@ public class FileObjectsApi {
     }
   }
 
+  public final static String[] uploadFileObjectsOauthRoles = new String[]{  "ManageObjects" };
   private HttpRequest.Builder uploadFileObjectsRequestBuilder(String parentFolderPath, List<File> files, String repositoryId, String tags) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageObjects" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,uploadFileObjectsOauthRoles);
 
 
     String localVarPath = "/file-objects/upload";

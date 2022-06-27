@@ -146,6 +146,7 @@ public class TransformersApi {
     }
   }
 
+  public final static String[] createTransformersOauthRoles = new String[]{  "AdminTransformers" };
   private HttpRequest.Builder createTransformersRequestBuilder(List<CreateTransformerRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class TransformersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminTransformers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createTransformersOauthRoles);
 
 
     String localVarPath = "/transformers";
@@ -246,12 +247,13 @@ public class TransformersApi {
     }
   }
 
+  public final static String[] deleteTransformersOauthRoles = new String[]{  "AdminTransformers" };
   private HttpRequest.Builder deleteTransformersRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminTransformers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteTransformersOauthRoles);
 
 
     String localVarPath = "/transformers";
@@ -345,12 +347,13 @@ public class TransformersApi {
     }
   }
 
+  public final static String[] deleteTransformersByQueryOauthRoles = new String[]{  "AdminTransformers" };
   private HttpRequest.Builder deleteTransformersByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminTransformers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteTransformersByQueryOauthRoles);
 
 
     String localVarPath = "/transformers/delete";
@@ -445,12 +448,13 @@ public class TransformersApi {
     }
   }
 
+  public final static String[] getTransformersOauthRoles = new String[]{  "AdminTransformers" };
   private HttpRequest.Builder getTransformersRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminTransformers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getTransformersOauthRoles);
 
 
     String localVarPath = "/transformers";
@@ -546,12 +550,13 @@ public class TransformersApi {
     }
   }
 
+  public final static String[] getTransformersByQueryOauthRoles = new String[]{  "AdminTransformers" };
   private HttpRequest.Builder getTransformersByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminTransformers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getTransformersByQueryOauthRoles);
 
 
     String localVarPath = "/transformers/query";
@@ -642,6 +647,7 @@ public class TransformersApi {
     }
   }
 
+  public final static String[] updateTransformersOauthRoles = new String[]{  "AdminTransformers" };
   private HttpRequest.Builder updateTransformersRequestBuilder(List<UpdateTransformerRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -650,8 +656,8 @@ public class TransformersApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminTransformers" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateTransformersOauthRoles);
 
 
     String localVarPath = "/transformers";

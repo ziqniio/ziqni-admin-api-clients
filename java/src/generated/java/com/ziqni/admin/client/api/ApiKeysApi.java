@@ -146,6 +146,7 @@ public class ApiKeysApi {
     }
   }
 
+  public final static String[] createApiKeysOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder createApiKeysRequestBuilder(CreateApiKeyRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class ApiKeysApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createApiKeysOauthRoles);
 
 
     String localVarPath = "/api-keys";
@@ -246,12 +247,13 @@ public class ApiKeysApi {
     }
   }
 
+  public final static String[] deleteApiKeysOauthRoles = new String[]{  "AdminActions" };
   private HttpRequest.Builder deleteApiKeysRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminActions" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteApiKeysOauthRoles);
 
 
     String localVarPath = "/api-keys";
@@ -345,6 +347,7 @@ public class ApiKeysApi {
     }
   }
 
+  public final static String[] deleteApiKeysByIdOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder deleteApiKeysByIdRequestBuilder(String id) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -353,8 +356,8 @@ public class ApiKeysApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteApiKeysByIdOauthRoles);
 
 
     String localVarPath = "/api-keys/{id}"
@@ -440,12 +443,13 @@ public class ApiKeysApi {
     }
   }
 
+  public final static String[] deleteApiKeysByQueryOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder deleteApiKeysByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteApiKeysByQueryOauthRoles);
 
 
     String localVarPath = "/api-keys/delete";
@@ -540,12 +544,13 @@ public class ApiKeysApi {
     }
   }
 
+  public final static String[] getApiKeysOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder getApiKeysRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getApiKeysOauthRoles);
 
 
     String localVarPath = "/api-keys";
@@ -641,6 +646,7 @@ public class ApiKeysApi {
     }
   }
 
+  public final static String[] getApiKeysByIdOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder getApiKeysByIdRequestBuilder(String id) throws ApiException {
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -649,8 +655,8 @@ public class ApiKeysApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getApiKeysByIdOauthRoles);
 
 
     String localVarPath = "/api-keys/{id}"
@@ -736,12 +742,13 @@ public class ApiKeysApi {
     }
   }
 
+  public final static String[] getApiKeysByQueryOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder getApiKeysByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getApiKeysByQueryOauthRoles);
 
 
     String localVarPath = "/api-keys/query";
@@ -832,6 +839,7 @@ public class ApiKeysApi {
     }
   }
 
+  public final static String[] updateApiKeysOauthRoles = new String[]{  "AdminApi" };
   private HttpRequest.Builder updateApiKeysRequestBuilder(UpdateApiKeyRequest body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -840,8 +848,8 @@ public class ApiKeysApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminApi" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateApiKeysOauthRoles);
 
 
     String localVarPath = "/api-keys";

@@ -287,6 +287,7 @@ public class {{classname}} {
     {{/asyncNative}}
   }
 
+  public final static String[] {{operationId}}OauthRoles = new String[]{ {{#authMethods}}{{#isOAuth}} {{#scopes}}"{{scope}}"{{^-last}},{{/-last}}{{/scopes}}{{^-last}},{{/-last}}{{/isOAuth}}{{/authMethods}} };
   private HttpRequest.Builder {{operationId}}RequestBuilder({{#allParams}}{{{dataType}}} {{paramName}}{{^-last}}, {{/-last}}{{/allParams}}) throws ApiException {
     {{#allParams}}
     {{#required}}
@@ -299,8 +300,8 @@ public class {{classname}} {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{ {{#authMethods}}{{#isOAuth}} {{#scopes}}"{{scope}}"{{^-last}},{{/-last}}{{/scopes}}{{^-last}},{{/-last}}{{/isOAuth}}{{/authMethods}} });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,{{operationId}}OauthRoles);
 
 
     {{! Switch delimiters for baseName so we can write constants like "{query}" }}

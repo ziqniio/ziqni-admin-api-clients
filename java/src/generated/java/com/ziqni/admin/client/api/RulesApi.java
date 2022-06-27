@@ -148,12 +148,13 @@ public class RulesApi {
     }
   }
 
+  public final static String[] deleteRulesByQueryOauthRoles = new String[]{  "AdminRewards" };
   private HttpRequest.Builder deleteRulesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminRewards" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteRulesByQueryOauthRoles);
 
 
     String localVarPath = "/rules/delete";
@@ -244,6 +245,7 @@ public class RulesApi {
     }
   }
 
+  public final static String[] getRuleSchemasOauthRoles = new String[]{  "ViewRules" };
   private HttpRequest.Builder getRuleSchemasRequestBuilder(String context) throws ApiException {
     // verify the required parameter 'context' is set
     if (context == null) {
@@ -252,8 +254,8 @@ public class RulesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewRules" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getRuleSchemasOauthRoles);
 
 
     String localVarPath = "/rules/schema";
@@ -351,12 +353,13 @@ public class RulesApi {
     }
   }
 
+  public final static String[] getRulesOauthRoles = new String[]{  "ViewRules" };
   private HttpRequest.Builder getRulesRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewRules" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getRulesOauthRoles);
 
 
     String localVarPath = "/rules";
@@ -452,12 +455,13 @@ public class RulesApi {
     }
   }
 
+  public final static String[] getRulesByQueryOauthRoles = new String[]{  "ViewRules" };
   private HttpRequest.Builder getRulesByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewRules" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getRulesByQueryOauthRoles);
 
 
     String localVarPath = "/rules/query";
@@ -548,6 +552,7 @@ public class RulesApi {
     }
   }
 
+  public final static String[] lookupOperandsRulesOauthRoles = new String[]{   };
   private HttpRequest.Builder lookupOperandsRulesRequestBuilder(List<RuleOperandLookupRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -556,8 +561,8 @@ public class RulesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,lookupOperandsRulesOauthRoles);
 
 
     String localVarPath = "/rules/operand-lookup";
@@ -648,6 +653,7 @@ public class RulesApi {
     }
   }
 
+  public final static String[] updateRulesOauthRoles = new String[]{   };
   private HttpRequest.Builder updateRulesRequestBuilder(List<UpdateRuleRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -656,8 +662,8 @@ public class RulesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateRulesOauthRoles);
 
 
     String localVarPath = "/rules";
@@ -748,6 +754,7 @@ public class RulesApi {
     }
   }
 
+  public final static String[] validateRulesOauthRoles = new String[]{   };
   private HttpRequest.Builder validateRulesRequestBuilder(List<UpdateRuleRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -756,8 +763,8 @@ public class RulesApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{   });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,validateRulesOauthRoles);
 
 
     String localVarPath = "/rules/validate";

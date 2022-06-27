@@ -146,6 +146,7 @@ public class TagsApi {
     }
   }
 
+  public final static String[] createTagsOauthRoles = new String[]{  "ManageTags" };
   private HttpRequest.Builder createTagsRequestBuilder(List<CreateTagRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -154,8 +155,8 @@ public class TagsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageTags" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,createTagsOauthRoles);
 
 
     String localVarPath = "/tags";
@@ -246,12 +247,13 @@ public class TagsApi {
     }
   }
 
+  public final static String[] deleteTagsOauthRoles = new String[]{  "AdminTags" };
   private HttpRequest.Builder deleteTagsRequestBuilder(List<String> id) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminTags" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteTagsOauthRoles);
 
 
     String localVarPath = "/tags";
@@ -345,12 +347,13 @@ public class TagsApi {
     }
   }
 
+  public final static String[] deleteTagsByQueryOauthRoles = new String[]{  "AdminTags" };
   private HttpRequest.Builder deleteTagsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "AdminTags" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,deleteTagsByQueryOauthRoles);
 
 
     String localVarPath = "/tags/delete";
@@ -445,12 +448,13 @@ public class TagsApi {
     }
   }
 
+  public final static String[] getTagsOauthRoles = new String[]{  "ViewTags" };
   private HttpRequest.Builder getTagsRequestBuilder(List<String> id, Integer limit, Integer skip) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewTags" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getTagsOauthRoles);
 
 
     String localVarPath = "/tags";
@@ -546,12 +550,13 @@ public class TagsApi {
     }
   }
 
+  public final static String[] getTagsByQueryOauthRoles = new String[]{  "ViewTags" };
   private HttpRequest.Builder getTagsByQueryRequestBuilder(QueryRequest body) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ViewTags" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,getTagsByQueryOauthRoles);
 
 
     String localVarPath = "/tags/query";
@@ -642,6 +647,7 @@ public class TagsApi {
     }
   }
 
+  public final static String[] updateTagsOauthRoles = new String[]{  "ManageTags" };
   private HttpRequest.Builder updateTagsRequestBuilder(List<UpdateTagRequest> body) throws ApiException {
     // verify the required parameter 'body' is set
     if (body == null) {
@@ -650,8 +656,8 @@ public class TagsApi {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
-    // Inject Oauth token into the request - ZIQNI 27-06-2022
-    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,new String[]{  "ManageTags" });
+    //
+    com.ziqni.admin.client.configuration.HandleOauthHeaderInjection.injectOauthToken(localVarRequestBuilder,updateTagsOauthRoles);
 
 
     String localVarPath = "/tags";
