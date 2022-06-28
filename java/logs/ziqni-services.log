@@ -4585,3 +4585,91 @@ java.lang.NullPointerException: null
 [31m28-06-2022 13:54:17.314 [WebSocketClient@1682261961-74] WebSocketClient WARN [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 441] - Resubscribing to /user/queue/rpc-results 
 [31m28-06-2022 13:54:17.315 [WebSocketClient@1682261961-74] WebSocketClient WARN [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 441] - Resubscribing to /user/queue/messages 
 [34m28-06-2022 13:54:17.696 [main] ApiClientFactoryUtil INFO [0;39m [36mc.z.a.c.u.ApiClientFactoryUtil[0;39m [ApiClientFactoryUtil.java: 26] - Waiting for the streaming client start 
+[34m28-06-2022 13:55:08.651 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.c.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 41] - Ziqni environment set to [/local_dev/client/] 
+[34m28-06-2022 13:55:08.660 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.c.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 189] - Instance id set to [7BlhqoEB6rKCX3n3Psx0] 
+[1;31m28-06-2022 13:55:09.415 [main] ConfigurationLoader ERROR[0;39m [36mc.z.a.c.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 56] - Could not load configuration from AWS 
+java.lang.NullPointerException: null
+	at com.ziqni.admin.client.util.ConfigurationLoader.loadFromAws(ConfigurationLoader.java:54)
+	at com.ziqni.admin.client.util.ConfigurationLoader.Parameters(ConfigurationLoader.java:137)
+	at com.ziqni.admin.client.util.ConfigurationLoader.getParameter(ConfigurationLoader.java:145)
+	at com.ziqni.admin.client.configuration.AdminApiClientConfig.load(AdminApiClientConfig.java:36)
+	at com.ziqni.admin.client.configuration.AdminApiClientConfig.isWebsocket(AdminApiClientConfig.java:91)
+	at com.ziqni.admin.client.ApiClientFactory.initialise(ApiClientFactory.java:60)
+	at com.ziqni.admin.client.util.ApiClientFactoryUtil.initApiClientFactory(ApiClientFactoryUtil.java:15)
+	at com.ziqni.admin.client.api.AccountMessagesApiTest.<init>(AccountMessagesApiTest.java:62)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.junit.platform.commons.util.ReflectionUtils.newInstance(ReflectionUtils.java:513)
+	at org.junit.jupiter.engine.execution.ConstructorInvocation.proceed(ConstructorInvocation.java:56)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptTestClassConstructor(InvocationInterceptor.java:72)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:77)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestClassConstructor(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateTestClass(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:79)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$before$0(ClassBasedTestDescriptor.java:184)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:183)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:78)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:136)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+[34m28-06-2022 13:55:09.466 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.c.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 160] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from environment variables [false] 
+[34m28-06-2022 13:55:09.467 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.c.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 149] - Parameter NOT FOUND for admin.client.base.path 
+[34m28-06-2022 13:55:10.061 [main] ApiClientFactory INFO [0;39m [36mc.z.a.c.ApiClientFactory[0;39m [ApiClientFactory.java: 62] - streaming client initialised [false] 
+[34m28-06-2022 13:55:10.301 [pool-3-thread-1] WebSocketClient INFO [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 290] - Connecting 
+[34m28-06-2022 13:55:10.310 [pool-3-thread-1] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 169] - Logging initialized @2099ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m28-06-2022 13:55:10.567 [main] ApiClientFactoryUtil INFO [0;39m [36mc.z.a.c.u.ApiClientFactoryUtil[0;39m [ApiClientFactoryUtil.java: 26] - Waiting for the streaming client start 
+[34m28-06-2022 13:55:10.897 [WebSocketClient@789082006-32] WebSocketClient INFO [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 402] - Connection established successfully with the server. 
+[31m28-06-2022 13:55:10.899 [WebSocketClient@789082006-32] WebSocketClient WARN [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 441] - Resubscribing to /user/queue/rpc-results 
+[31m28-06-2022 13:55:10.901 [WebSocketClient@789082006-32] WebSocketClient WARN [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 441] - Resubscribing to /user/queue/messages 
+[34m28-06-2022 13:55:10.902 [pool-3-thread-1] WebSocketClient INFO [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 290] - Connecting 
+[34m28-06-2022 13:55:11.068 [main] ApiClientFactoryUtil INFO [0;39m [36mc.z.a.c.u.ApiClientFactoryUtil[0;39m [ApiClientFactoryUtil.java: 26] - Waiting for the streaming client start 
+[34m28-06-2022 13:55:11.098 [WebSocketClient@1586937111-72] WebSocketClient INFO [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 402] - Connection established successfully with the server. 
+[31m28-06-2022 13:55:11.099 [WebSocketClient@1586937111-72] WebSocketClient WARN [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 441] - Resubscribing to /user/queue/rpc-results 
+[31m28-06-2022 13:55:11.099 [WebSocketClient@1586937111-72] WebSocketClient WARN [0;39m [36mc.z.a.c.s.WebSocketClient[0;39m [WebSocketClient.java: 441] - Resubscribing to /user/queue/messages 
+[34m28-06-2022 13:55:11.568 [main] ApiClientFactoryUtil INFO [0;39m [36mc.z.a.c.u.ApiClientFactoryUtil[0;39m [ApiClientFactoryUtil.java: 26] - Waiting for the streaming client start 
