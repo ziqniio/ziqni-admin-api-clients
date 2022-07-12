@@ -1,5 +1,5 @@
 /**
- * Ziqni Admin Api
+ * ZIQNI Admin API
  * Ziqni Application Services are used to manage and configure spaces.
  *
  * The version of the OpenAPI document: 3.0.1
@@ -196,6 +196,7 @@ import MemberMessage from './model/MemberMessage';
 import MemberMessageAllOf from './model/MemberMessageAllOf';
 import MemberMessageResponse from './model/MemberMessageResponse';
 import MemberResponse from './model/MemberResponse';
+import MemberTokenRequest from './model/MemberTokenRequest';
 import MemberType from './model/MemberType';
 import MessageStatus from './model/MessageStatus';
 import MessageType from './model/MessageType';
@@ -269,6 +270,8 @@ import StrategyType from './model/StrategyType';
 import Tag from './model/Tag';
 import TagAllOf from './model/TagAllOf';
 import TagResponse from './model/TagResponse';
+import Token from './model/Token';
+import TokenResponse from './model/TokenResponse';
 import Transformer from './model/Transformer';
 import TransformerAllOf from './model/TransformerAllOf';
 import TransformerResponse from './model/TransformerResponse';
@@ -370,6 +373,7 @@ import FileObjectsApi from './api/FileObjectsApi';
 import FileRepositoriesApi from './api/FileRepositoriesApi';
 import LanguagesApi from './api/LanguagesApi';
 import MemberMessagesApi from './api/MemberMessagesApi';
+import MemberTokenApi from './api/MemberTokenApi';
 import MembersApi from './api/MembersApi';
 import NotificationsApi from './api/NotificationsApi';
 import ProductsApi from './api/ProductsApi';
@@ -1522,6 +1526,12 @@ export {
     MemberResponse,
 
     /**
+     * The MemberTokenRequest model constructor.
+     * @property {module:model/MemberTokenRequest}
+     */
+    MemberTokenRequest,
+
+    /**
      * The MemberType model constructor.
      * @property {module:model/MemberType}
      */
@@ -1958,6 +1968,18 @@ export {
      * @property {module:model/TagResponse}
      */
     TagResponse,
+
+    /**
+     * The Token model constructor.
+     * @property {module:model/Token}
+     */
+    Token,
+
+    /**
+     * The TokenResponse model constructor.
+     * @property {module:model/TokenResponse}
+     */
+    TokenResponse,
 
     /**
      * The Transformer model constructor.
@@ -2564,6 +2586,12 @@ export {
     * @property {module:api/MemberMessagesApi}
     */
     MemberMessagesApi,
+
+    /**
+    * The MemberTokenApi service constructor.
+    * @property {module:api/MemberTokenApi}
+    */
+    MemberTokenApi,
 
     /**
     * The MembersApi service constructor.

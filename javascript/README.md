@@ -257,6 +257,7 @@ Class | Method | HTTP request | Description
 *@ZiqniTechAdminApiClient.MemberMessagesApi* | [**getMemberMessages**](docs/MemberMessagesApi.md#getMemberMessages) | **GET** /member-messages | 
 *@ZiqniTechAdminApiClient.MemberMessagesApi* | [**getMemberMessagesByQuery**](docs/MemberMessagesApi.md#getMemberMessagesByQuery) | **POST** /member-messages/query | 
 *@ZiqniTechAdminApiClient.MemberMessagesApi* | [**updateMemberMessagesStatus**](docs/MemberMessagesApi.md#updateMemberMessagesStatus) | **PUT** /member-messages/state | NOT AVAILABLE IN CURRENT RELEASE
+*@ZiqniTechAdminApiClient.MemberTokenApi* | [**createMemberToken**](docs/MemberTokenApi.md#createMemberToken) | **POST** /member-token | 
 *@ZiqniTechAdminApiClient.MembersApi* | [**createMembers**](docs/MembersApi.md#createMembers) | **POST** /members | Create members
 *@ZiqniTechAdminApiClient.MembersApi* | [**deleteMembers**](docs/MembersApi.md#deleteMembers) | **DELETE** /members | Delete members
 *@ZiqniTechAdminApiClient.MembersApi* | [**deleteMembersByQuery**](docs/MembersApi.md#deleteMembersByQuery) | **POST** /members/delete | Delete members by query
@@ -535,6 +536,7 @@ Class | Method | HTTP request | Description
  - [@ZiqniTechAdminApiClient.MemberMessageAllOf](docs/MemberMessageAllOf.md)
  - [@ZiqniTechAdminApiClient.MemberMessageResponse](docs/MemberMessageResponse.md)
  - [@ZiqniTechAdminApiClient.MemberResponse](docs/MemberResponse.md)
+ - [@ZiqniTechAdminApiClient.MemberTokenRequest](docs/MemberTokenRequest.md)
  - [@ZiqniTechAdminApiClient.MemberType](docs/MemberType.md)
  - [@ZiqniTechAdminApiClient.MessageStatus](docs/MessageStatus.md)
  - [@ZiqniTechAdminApiClient.MessageType](docs/MessageType.md)
@@ -608,6 +610,8 @@ Class | Method | HTTP request | Description
  - [@ZiqniTechAdminApiClient.Tag](docs/Tag.md)
  - [@ZiqniTechAdminApiClient.TagAllOf](docs/TagAllOf.md)
  - [@ZiqniTechAdminApiClient.TagResponse](docs/TagResponse.md)
+ - [@ZiqniTechAdminApiClient.Token](docs/Token.md)
+ - [@ZiqniTechAdminApiClient.TokenResponse](docs/TokenResponse.md)
  - [@ZiqniTechAdminApiClient.Transformer](docs/Transformer.md)
  - [@ZiqniTechAdminApiClient.TransformerAllOf](docs/TransformerAllOf.md)
  - [@ZiqniTechAdminApiClient.TransformerResponse](docs/TransformerResponse.md)

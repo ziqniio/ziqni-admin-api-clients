@@ -1,5 +1,5 @@
 /*
- * Ziqni Admin Api
+ * ZIQNI Admin API
  * Ziqni Application Services are used to manage and configure spaces.
  *
  * The version of the OpenAPI document: 3.0.1
@@ -38,7 +38,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   CollaboratorAllOf.JSON_PROPERTY_ROLES,
   CollaboratorAllOf.JSON_PROPERTY_LAST_NAME,
   CollaboratorAllOf.JSON_PROPERTY_FIRST_NAME,
-  CollaboratorAllOf.JSON_PROPERTY_AVAILABLE_ROLES
+  CollaboratorAllOf.JSON_PROPERTY_AVAILABLE_ROLES,
+  CollaboratorAllOf.JSON_PROPERTY_ID,
+  CollaboratorAllOf.JSON_PROPERTY_SPACE_NAME
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CollaboratorAllOf {
@@ -56,6 +58,12 @@ public class CollaboratorAllOf {
 
   public static final String JSON_PROPERTY_AVAILABLE_ROLES = "availableRoles";
   private CollaboratorRolesAvailable availableRoles;
+
+  public static final String JSON_PROPERTY_ID = "id";
+  private String id;
+
+  public static final String JSON_PROPERTY_SPACE_NAME = "spaceName";
+  private String spaceName;
 
 
   public CollaboratorAllOf email(String email) {
@@ -196,6 +204,58 @@ public class CollaboratorAllOf {
   }
 
 
+  public CollaboratorAllOf id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * A unique system generated identifier
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "sc1samQmVr61KgaPQq7x", value = "A unique system generated identifier")
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getId() {
+    return id;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setId(String id) {
+    this.id = id;
+  }
+
+
+  public CollaboratorAllOf spaceName(String spaceName) {
+    this.spaceName = spaceName;
+    return this;
+  }
+
+   /**
+   * This is the space name which is linked to the account
+   * @return spaceName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "Your_space_name", value = "This is the space name which is linked to the account")
+  @JsonProperty(JSON_PROPERTY_SPACE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getSpaceName() {
+    return spaceName;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SPACE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSpaceName(String spaceName) {
+    this.spaceName = spaceName;
+  }
+
+
   /**
    * Return true if this Collaborator_allOf object is equal to o.
    */
@@ -212,12 +272,14 @@ public class CollaboratorAllOf {
         Objects.equals(this.roles, collaboratorAllOf.roles) &&
         Objects.equals(this.lastName, collaboratorAllOf.lastName) &&
         Objects.equals(this.firstName, collaboratorAllOf.firstName) &&
-        Objects.equals(this.availableRoles, collaboratorAllOf.availableRoles);
+        Objects.equals(this.availableRoles, collaboratorAllOf.availableRoles) &&
+        Objects.equals(this.id, collaboratorAllOf.id) &&
+        Objects.equals(this.spaceName, collaboratorAllOf.spaceName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, roles, lastName, firstName, availableRoles);
+    return Objects.hash(email, roles, lastName, firstName, availableRoles, id, spaceName);
   }
 
   @Override
@@ -229,6 +291,8 @@ public class CollaboratorAllOf {
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    availableRoles: ").append(toIndentedString(availableRoles)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    spaceName: ").append(toIndentedString(spaceName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -1,5 +1,5 @@
 /**
- * Ziqni Admin Api
+ * ZIQNI Admin API
  * Ziqni Application Services are used to manage and configure spaces.
  *
  * The version of the OpenAPI document: 3.0.1
@@ -69,6 +69,14 @@ class CollaboratorAllOf {
       if (data.hasOwnProperty('availableRoles')) {
         obj['availableRoles'] = CollaboratorRolesAvailable.constructFromObject(data['availableRoles']);
       }
+
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      }
+
+      if (data.hasOwnProperty('spaceName')) {
+        obj['spaceName'] = ApiClient.convertToType(data['spaceName'], 'String');
+      }
     }
 
     return obj;
@@ -105,4 +113,16 @@ CollaboratorAllOf.prototype['firstName'] = undefined;
  */
 
 CollaboratorAllOf.prototype['availableRoles'] = undefined;
+/**
+ * A unique system generated identifier
+ * @member {String} id
+ */
+
+CollaboratorAllOf.prototype['id'] = undefined;
+/**
+ * This is the space name which is linked to the account
+ * @member {String} spaceName
+ */
+
+CollaboratorAllOf.prototype['spaceName'] = undefined;
 export default CollaboratorAllOf;
